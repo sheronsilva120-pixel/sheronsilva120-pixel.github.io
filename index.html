@@ -32,7 +32,6 @@
   <meta name="keywords" content="AL-TUJAR VAULTS, digital marketplace, video editing presets, LUTs, SFX audio packs, MP3 sound effects, HTML templates, digital downloads, creator marketplace">
   <meta name="robots" content="index, follow">
 
-
   <!-- Tailwind CSS & Official Fonts -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -337,7 +336,6 @@
           <option value="it">🇮🇹 Italiano</option>
         </select>
 
-        <!-- Inbox button with dynamic unread hiding -->
         <button type="button" id="header-inbox-btn" onclick="switchMainTab('studio'); switchStudioSubTab('inbox');" style="display: none;" class="px-2.5 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs font-semibold items-center gap-1 cursor-pointer">
           <span>📩</span>
           <span id="inbox-count-badge" class="bg-rose-500 text-white font-bold text-[10px] px-1.5 rounded-full" style="display: none;">0</span>
@@ -375,7 +373,6 @@
             <span>📧 Official Contact & Promos: altujarvaults@gmail.com</span>
           </div>
           
-          <!-- FIX 2 APPLIED: Explicit text-white ensures high contrast in both Dark and Bright/Light mode -->
           <h1 data-i18n="hero_title" class="font-royal text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-white">
             Where Product Quality Beats <span class="gold-gradient-text">Follower Count.</span>
           </h1>
@@ -502,7 +499,7 @@
     </div>
   </section>
 
-  <!-- PUBLIC CREATOR PROFILE VIEW -->
+  <!-- PUBLIC CREATOR PROFILE VIEW (WITH DYNAMIC FOLLOW BUTTON) -->
   <section id="view-public-profile" style="display: none;" class="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 py-6 space-y-6">
     <button type="button" onclick="switchMainTab('shop')" class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs font-semibold text-amber-300 cursor-pointer">← Back to Marketplace</button>
     <div class="bg-obsidianCard border border-amber-500/30 rounded-3xl overflow-hidden shadow-2xl">
@@ -525,7 +522,9 @@
         </div>
         <div class="flex items-center gap-2">
           <button type="button" onclick="promptSendDirectMessageToCreator()" class="px-4 py-2.5 rounded-xl bg-slate-900 border border-amber-500/40 text-amber-300 text-xs font-bold cursor-pointer">✉️ Message Seller</button>
-          <button type="button" id="pub-prof-follow-btn" onclick="toggleFollowCreatorFromProfile()" class="gold-btn px-5 py-2.5 rounded-xl text-xs font-extrabold cursor-pointer">+ Follow Creator</button>
+          <button type="button" id="pub-prof-follow-btn" onclick="toggleFollowCreatorFromProfile()" class="gold-btn px-5 py-2.5 rounded-xl text-xs font-extrabold cursor-pointer">
+            <span id="pub-prof-follow-icon">＋</span> <span id="pub-prof-follow-text">Follow Creator</span>
+          </button>
         </div>
       </div>
     </div>
@@ -704,7 +703,7 @@
       <div id="payment-center-details"></div>
     </div>
 
-    <!-- Manage Profile (Cleaned - Seller cannot reset own account) -->
+    <!-- Manage Profile -->
     <div id="studio-sub-profile" style="display: none;" class="bg-obsidianCard border border-slate-800 rounded-2xl p-5 space-y-4 text-xs">
       <div class="flex items-center justify-between border-b border-slate-800 pb-2">
         <h3 class="font-royal text-lg font-bold text-amber-300">⚙️ Storefront & Profile Settings</h3>
@@ -738,7 +737,7 @@
     </div>
   </section>
 
-  <!-- MAIN VIEW 4: TREASURY (WITH EXECUTIVE AUDIT & RESET CONTROLS) -->
+  <!-- MAIN VIEW 4: TREASURY (WITH AUDIT, PAYMENTS & ADS CONTROLLER) -->
   <section id="view-admin" style="display: none;" class="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 py-6 space-y-6">
     <div id="admin-lock-screen" class="max-w-md mx-auto bg-obsidianCard border border-amber-500/40 rounded-3xl p-6 text-center space-y-4 my-10">
       <h2 class="font-royal text-xl font-bold text-white">🔐 Vault Security Gate</h2>
@@ -793,6 +792,60 @@
             </thead>
             <tbody id="admin-top100-audit-tbody" class="divide-y divide-slate-800/60"></tbody>
           </table>
+        </div>
+      </div>
+
+      <!-- NEW FEATURE 2: ADDITIONAL PAYMENT METHODS & LOCAL BANKING MANAGER -->
+      <div class="bg-obsidianCard border border-amber-500/40 rounded-2xl p-5 space-y-3">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+          <div class="flex items-center gap-2">
+            <span class="text-lg">💳</span>
+            <h3 class="font-bold text-amber-300 text-sm">Additional Payment Methods & Banking (Syncs to User Upload Modal)</h3>
+          </div>
+          <span class="text-[10px] text-slate-400">Telebirr, CBE Bank, PayPal, Wise, etc.</span>
+        </div>
+        <p class="text-[11px] text-slate-400">Any payment options configured here will automatically display inside the checkout / membership modal when users try to upload files or unlock passes.</p>
+        <div id="admin-custom-payments-list" class="space-y-2"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
+          <input type="text" id="new-pay-method-name" placeholder="Method Name (e.g. Telebirr, CBE Bank, PayPal)" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white text-xs outline-none focus:border-amber-400">
+          <input type="text" id="new-pay-method-details" placeholder="Account No / Phone / Instructions" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white text-xs outline-none focus:border-amber-400">
+          <button type="button" onclick="adminAddCustomPaymentMethod()" class="gold-btn py-2 px-4 rounded-xl font-bold text-xs cursor-pointer">+ Add Payment Method</button>
+        </div>
+      </div>
+
+      <!-- NEW FEATURE 3: SPONSORED ADS CAMPAIGN MANAGER -->
+      <div class="bg-obsidianCard border border-amber-500/40 rounded-2xl p-5 space-y-3">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+          <div class="flex items-center gap-2">
+            <span class="text-lg">📢</span>
+            <h3 class="font-bold text-amber-300 text-sm">Sponsored Ads Campaign (altujarvaults@gmail.com)</h3>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="ad-toggle-active" class="sr-only peer" onchange="saveSponsoredAdConfig()">
+            <div class="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
+            <span class="ml-2 text-xs font-semibold text-white/80">Active</span>
+          </label>
+        </div>
+        <p class="text-[11px] text-slate-400">When active, an ad popup appears for site visitors featuring your sponsor's video or image and routes them directly to their target link.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+          <div>
+            <label class="block text-slate-400 mb-1">Ad Media Type</label>
+            <select id="ad-media-type" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white outline-none focus:border-amber-400">
+              <option value="image">Image Banner (PNG, JPG, WebP)</option>
+              <option value="video">Direct Video (.mp4)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1">Target Click URL (Destination link)</label>
+            <input type="url" id="ad-target-url" placeholder="https://amazon.com/dp/... or https://sponsor-store.com" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white outline-none focus:border-amber-400">
+          </div>
+          <div class="md:col-span-2">
+            <label class="block text-slate-400 mb-1">Media File URL (from Supabase Storage bucket 'ads' or direct link)</label>
+            <input type="text" id="ad-media-url" placeholder="https://szhywytficsfkgcktkxl.supabase.co/storage/v1/object/public/ads/promo.mp4" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white outline-none focus:border-amber-400">
+          </div>
+        </div>
+        <div class="flex justify-end pt-1">
+          <button type="button" onclick="saveSponsoredAdConfig(true)" class="gold-btn py-2 px-5 rounded-xl font-bold text-xs cursor-pointer">💾 Save Ad Campaign</button>
         </div>
       </div>
 
@@ -899,7 +952,7 @@
     </div>
   </div>
 
-  <!-- MEMBERSHIP CHECKOUT MODAL -->
+  <!-- MEMBERSHIP CHECKOUT MODAL (WITH SYNCED CUSTOM PAYMENT METHODS) -->
   <div id="native-checkout-modal" style="display: none;" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md items-center justify-center p-3 overflow-y-auto">
     <div class="bg-obsidianCard border border-amber-500/40 rounded-3xl max-w-xl w-full p-5 space-y-4 shadow-2xl text-xs my-auto max-h-[94vh] overflow-y-auto">
       <div class="flex items-center justify-between border-b border-slate-800 pb-3">
@@ -922,6 +975,9 @@
       </div>
 
       <div id="checkout-rail-details" class="bg-slate-950 border border-slate-800 rounded-2xl p-3.5 space-y-2"></div>
+
+      <!-- DYNAMIC CUSTOM PAYMENT METHODS SYNC CONTAINER -->
+      <div id="checkout-custom-methods-container" class="space-y-1.5 pt-1"></div>
 
       <div class="space-y-2 bg-slate-950/80 border border-amber-500/30 p-3.5 rounded-2xl">
         <label class="block text-amber-300 font-bold text-[11px]">
@@ -965,6 +1021,26 @@
     </div>
   </div>
 
+  <!-- NEW FEATURE 3: SPONSORED AD POPUP MODAL (WITH CLOSE 'X' AND DIRECT DESTINATION LINK) -->
+  <div id="sponsored-ad-modal" style="display: none;" class="fixed inset-0 z-[130] bg-black/85 backdrop-blur-md items-center justify-center p-4">
+    <div class="bg-obsidianCard border border-amber-500/50 rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl relative text-xs">
+      <div class="flex items-center justify-between px-4 py-3 bg-slate-950 border-b border-slate-800">
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-widest bg-amber-400 text-black uppercase">Sponsored</span>
+          <span class="text-xs text-slate-400">Partner Promotion</span>
+        </div>
+        <button type="button" onclick="closeSponsoredAdModal()" class="w-7 h-7 flex items-center justify-center rounded-full bg-slate-900 border border-slate-700 text-slate-300 hover:text-white font-bold cursor-pointer">✕</button>
+      </div>
+      <a id="ad-modal-anchor" href="#" target="_blank" rel="noopener noreferrer" class="block group relative overflow-hidden bg-black">
+        <div id="ad-modal-media-box" class="w-full min-h-[220px] max-h-[360px] flex items-center justify-center overflow-hidden"></div>
+        <div class="p-3.5 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent flex items-center justify-between border-t border-slate-800/60">
+          <span class="text-xs font-bold text-amber-300 group-hover:underline flex items-center gap-1.5">Visit Sponsor Website <span>↗</span></span>
+          <span class="text-[10px] text-slate-500 font-mono">Promos: altujarvaults@gmail.com</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
   <footer class="border-t border-slate-800/80 bg-slate-950/90 py-8 px-4 mt-12 text-xs text-slate-400">
     <div class="max-w-7xl mx-auto space-y-4">
       <div class="flex flex-wrap items-center justify-between gap-4">
@@ -979,7 +1055,7 @@
       <div id="footer-social-strip" class="flex flex-wrap gap-2 pt-3 border-t border-slate-900"></div>
     </div>
   </footer>
-    <script>
+  <script>
     // -------------------------------------------------------------------------
     // SUPABASE CLIENT INITIALIZATION (SAFE INITIALIZATION)
     // -------------------------------------------------------------------------
@@ -1037,7 +1113,7 @@
     }
 
     // -------------------------------------------------------------------------
-    // AUDITED & VERIFIED PLATFORM CONFIGURATION
+    // AUDITED & VERIFIED PLATFORM CONFIGURATION (WITH CUSTOM PAYMENTS & ADS)
     // -------------------------------------------------------------------------
     const DEFAULT_CONFIG = {
       subPrice: 23,
@@ -1060,7 +1136,16 @@
         facebook: 'https://www.facebook.com/share/g/1AGEYufudK/',
         reddit: 'https://www.reddit.com/r/Al_tujar_vaults/s/qbc7Daeypg'
       },
-      amazonTag: 'altujarvaults-20'
+      amazonTag: 'altujarvaults-20',
+      customPayments: [
+        { id: 1, name: 'Telebirr / Local Banking', details: 'Phone/Account: +251 9XX XXX XXX (Send confirmation screenshot to altujarvaults@gmail.com)' }
+      ],
+      sponsoredAd: {
+        active: false,
+        type: 'image',
+        mediaUrl: '',
+        targetUrl: 'https://sheronsilva120-pixel.github.io/'
+      }
     };
 
     const INITIAL_PRODUCTS = [
@@ -1176,7 +1261,6 @@
       }
     };
 
-    // Permanent Deletion Registry (Prevents deleted products from reappearing)
     let deletedProductIds = safeJSONParse('altujar_master_deleted_prods', []);
 
     function loadMergedPersistentData() {
@@ -1189,7 +1273,9 @@
         beginnerBasePrice: Number(savedCfg.beginnerBasePrice || 23),
         beginnerSalePct: Number(savedCfg.beginnerSalePct || 23),
         restartPenaltyPct: Number(savedCfg.restartPenaltyPct || 15),
-        socials: { ...DEFAULT_CONFIG.socials, ...(savedCfg.socials || {}) }
+        socials: { ...DEFAULT_CONFIG.socials, ...(savedCfg.socials || {}) },
+        customPayments: Array.isArray(savedCfg.customPayments) ? savedCfg.customPayments : DEFAULT_CONFIG.customPayments,
+        sponsoredAd: { ...DEFAULT_CONFIG.sponsoredAd, ...(savedCfg.sponsoredAd || {}) }
       };
 
       const prodMap = new Map();
@@ -1364,7 +1450,6 @@
         if (cloudProducts && Array.isArray(cloudProducts) && cloudProducts.length > 0) {
           const map = new Map();
           cloudProducts.forEach(p => {
-            // Strictly reject deleted products from loading from the cloud
             if (!deletedProductIds.includes(p.id)) {
               map.set(p.id, {
                 id: p.id,
@@ -1444,7 +1529,7 @@
       } catch (err) {}
     }
 
-        function updateGoogleSEOSchema() {
+    function updateGoogleSEOSchema() {
       const el = document.getElementById('dynamic-seo-schema');
       if (!el) return;
       const itemList = {
@@ -1474,29 +1559,12 @@
               },
               "shippingDetails": {
                 "@type": "OfferShippingDetails",
-                "shippingRate": {
-                  "@type": "MonetaryAmount",
-                  "value": "0.00",
-                  "currency": "USD"
-                },
-                "shippingDestination": {
-                  "@type": "DefinedRegion",
-                  "addressCountry": "US"
-                },
+                "shippingRate": { "@type": "MonetaryAmount", "value": "0.00", "currency": "USD" },
+                "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "US" },
                 "deliveryTime": {
                   "@type": "ShippingDeliveryTime",
-                  "handlingTime": {
-                    "@type": "QuantitativeValue",
-                    "minValue": 0,
-                    "maxValue": 0,
-                    "unitCode": "DAY"
-                  },
-                  "transitTime": {
-                    "@type": "QuantitativeValue",
-                    "minValue": 0,
-                    "maxValue": 0,
-                    "unitCode": "DAY"
-                  }
+                  "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" },
+                  "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" }
                 }
               }
             }
@@ -1505,7 +1573,6 @@
       };
       el.textContent = JSON.stringify(itemList);
     }
-
 
     const I18N_DICT = {
       'en': { choose_lang_lbl: 'Choose Your Language', brand_sub: 'Merit-First Hybrid Marketplace', nav_shop: '🛍️ Shop Marketplace', nav_studio: '✨ My Profile, Inbox & Studio', nav_rules: '⚖️ Legal & Privacy', contact_hub_title: 'Official Contact & Community Hub', sign_in_tab: 'Sign In / Login', create_acc_tab: 'Create New Account', sign_in_btn: '🔐 Sign In to AL-TUJAR VAULTS' },
@@ -1585,9 +1652,7 @@
 
     async function getLiveSolPriceUsd() {
       const now = Date.now();
-      if (now - lastPriceFetchTime < 180000 && cachedSolUsdPrice > 0) {
-        return cachedSolUsdPrice;
-      }
+      if (now - lastPriceFetchTime < 180000 && cachedSolUsdPrice > 0) return cachedSolUsdPrice;
       try {
         const res = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=SOLUSDT');
         const data = await res.json();
@@ -1973,13 +2038,7 @@
           };
         }
 
-        return { 
-          verified: true, 
-          slot: data.result.slot, 
-          totalUsdPaid, 
-          netTokenCredited, 
-          netSolCredited 
-        };
+        return { verified: true, slot: data.result.slot, totalUsdPaid, netTokenCredited, netSolCredited };
       } catch (err) {
         return { verified: false, reason: 'Blockchain RPC connection timeout. Dispatched to manual review.' };
       }
@@ -2185,7 +2244,7 @@
     }
 
     // -------------------------------------------------------------------------
-    // AUTOMATED DIRECT DOWNLOAD PURCHASES (BUYER SENDS DIRECTLY TO SELLER WALLET)
+    // AUTOMATED DIRECT DOWNLOAD PURCHASES
     // -------------------------------------------------------------------------
     async function triggerDirectDigitalPurchaseAndDownload(p) {
       if (!currentUser) {
@@ -2348,7 +2407,6 @@
       const email = currentUser.email.toLowerCase();
       delete usersDB[email];
       
-      // Blacklist and delete products permanently
       const myProds = products.filter(p => (p.creatorEmail || '').toLowerCase() === email);
       myProds.forEach(p => {
         if (!deletedProductIds.includes(p.id)) deletedProductIds.push(p.id);
@@ -2372,7 +2430,6 @@
       return Boolean(currentUser && currentUser.email && currentUser.email.toLowerCase() === OWNER_EMAIL);
     }
 
-    // FIX 1 APPLIED: Deletion is strictly reserved for the original creator or the platform owner
     function canUserDeleteProduct(prod) {
       if (!currentUser || !prod) return false;
       const userEmail = (currentUser.email || '').toLowerCase();
@@ -2618,6 +2675,7 @@
         return;
       }
       selectCheckoutTier(selectedCheckoutTierMode);
+      renderCheckoutCustomPaymentMethods();
       const begBox = document.getElementById('beginner-offer-box');
       if (begBox) begBox.style.display = canUserSeeBeginnerOffer(currentUser) ? 'block' : 'none';
       openModal('native-checkout-modal');
@@ -2670,7 +2728,130 @@
     }
 
     // -------------------------------------------------------------------------
-    // MULTI-FORMAT UPLOAD ENGINE (WITH STRICT PRE-FLIGHT MEMBERSHIP CHECK)
+    // NEW FEATURE 2: ADDITIONAL PAYMENT METHODS (TELEBIRR, CBE, PAYPAL)
+    // -------------------------------------------------------------------------
+    function adminAddCustomPaymentMethod() {
+      if (!isOwnerLoggedIn()) return;
+      const nameInput = document.getElementById('new-pay-method-name');
+      const detailsInput = document.getElementById('new-pay-method-details');
+      const name = (nameInput?.value || '').trim();
+      const details = (detailsInput?.value || '').trim();
+
+      if (!name || !details) {
+        alert('Please enter both the payment method name and account details/instructions.');
+        return;
+      }
+
+      appConfig.customPayments = appConfig.customPayments || [];
+      appConfig.customPayments.push({ id: Date.now(), name, details });
+      saveAllState();
+      renderAdminCustomPaymentMethods();
+      renderCheckoutCustomPaymentMethods();
+
+      nameInput.value = '';
+      detailsInput.value = '';
+      alert(`✅ Added payment method "${name}"!`);
+    }
+
+    function adminDeleteCustomPaymentMethod(id) {
+      if (!isOwnerLoggedIn()) return;
+      appConfig.customPayments = (appConfig.customPayments || []).filter(m => m.id !== id);
+      saveAllState();
+      renderAdminCustomPaymentMethods();
+      renderCheckoutCustomPaymentMethods();
+    }
+
+    function renderAdminCustomPaymentMethods() {
+      const listEl = document.getElementById('admin-custom-payments-list');
+      if (!listEl) return;
+      const methods = appConfig.customPayments || [];
+      listEl.innerHTML = methods.length === 0
+        ? `<p class="text-slate-400 text-xs italic">No additional payment methods added yet.</p>`
+        : methods.map(m => `
+            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between items-center text-xs">
+              <div>
+                <strong class="text-amber-300 font-bold">${sanitizeHTML(m.name)}:</strong>
+                <span class="text-slate-300 font-mono text-[11px] ml-2 select-all">${sanitizeHTML(m.details)}</span>
+              </div>
+              <button type="button" onclick="adminDeleteCustomPaymentMethod(${m.id})" class="px-2.5 py-1 rounded bg-rose-500/20 text-rose-300 hover:bg-rose-500/30 text-[10px] font-bold cursor-pointer">Delete</button>
+            </div>
+          `).join('');
+    }
+
+    function renderCheckoutCustomPaymentMethods() {
+      const box = document.getElementById('checkout-custom-methods-container');
+      if (!box) return;
+      const methods = appConfig.customPayments || [];
+      box.innerHTML = methods.length === 0 ? '' : `
+        <div class="bg-slate-950/90 border border-slate-800 rounded-2xl p-3 space-y-1.5 text-xs text-left">
+          <span class="font-bold text-amber-300 block text-[11px]">Additional Accepted Payment Methods:</span>
+          ${methods.map(m => `
+            <div class="p-2 rounded-xl bg-slate-900 border border-slate-800 text-[11px]">
+              <strong class="text-amber-400 block">${sanitizeHTML(m.name)}</strong>
+              <span class="text-slate-300 font-mono text-[10px] select-all break-all">${sanitizeHTML(m.details)}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // -------------------------------------------------------------------------
+    // NEW FEATURE 3: SPONSORED ADS POPUP ENGINE (VIDEO & IMAGE)
+    // -------------------------------------------------------------------------
+    function saveSponsoredAdConfig(showAlert = false) {
+      if (!isOwnerLoggedIn()) return;
+      appConfig.sponsoredAd = {
+        active: Boolean(document.getElementById('ad-toggle-active')?.checked),
+        type: document.getElementById('ad-media-type')?.value || 'image',
+        mediaUrl: (document.getElementById('ad-media-url')?.value || '').trim(),
+        targetUrl: (document.getElementById('ad-target-url')?.value || '').trim()
+      };
+      saveAllState();
+      if (showAlert) alert('💾 Sponsored ad settings saved successfully!');
+    }
+
+    function loadSponsoredAdSettings() {
+      const ad = appConfig.sponsoredAd || { active: false, type: 'image', mediaUrl: '', targetUrl: '' };
+      const toggle = document.getElementById('ad-toggle-active');
+      const type = document.getElementById('ad-media-type');
+      const media = document.getElementById('ad-media-url');
+      const target = document.getElementById('ad-target-url');
+      if (toggle) toggle.checked = Boolean(ad.active);
+      if (type) type.value = ad.type || 'image';
+      if (media) media.value = ad.mediaUrl || '';
+      if (target) target.value = ad.targetUrl || '';
+    }
+
+    function checkAndDisplaySponsoredAd() {
+      const ad = appConfig.sponsoredAd;
+      if (!ad || !ad.active || !ad.mediaUrl) return;
+      if (sessionStorage.getItem('altujar_ad_dismissed')) return;
+
+      const modal = document.getElementById('sponsored-ad-modal');
+      const mediaBox = document.getElementById('ad-modal-media-box');
+      const anchor = document.getElementById('ad-modal-anchor');
+      if (!modal || !mediaBox || !anchor) return;
+
+      anchor.href = ad.targetUrl || '#';
+      if (ad.type === 'video') {
+        mediaBox.innerHTML = `<video src="${sanitizeHTML(ad.mediaUrl)}" autoplay muted loop playsinline class="w-full h-full object-cover max-h-[360px] bg-black"></video>`;
+      } else {
+        mediaBox.innerHTML = `<img src="${sanitizeHTML(ad.mediaUrl)}" alt="Sponsored Partner" class="w-full h-full object-cover max-h-[360px] bg-black" />`;
+      }
+
+      setTimeout(() => {
+        modal.style.display = 'flex';
+      }, 2200);
+    }
+
+    function closeSponsoredAdModal() {
+      const modal = document.getElementById('sponsored-ad-modal');
+      if (modal) modal.style.display = 'none';
+      sessionStorage.setItem('altujar_ad_dismissed', 'true');
+    }
+
+    // -------------------------------------------------------------------------
+    // MULTI-FORMAT UPLOAD ENGINE
     // -------------------------------------------------------------------------
     function handleUploadNatureChange() {
       const nature = document.getElementById('up-nature')?.value || 'Digital';
@@ -2881,7 +3062,6 @@
       const priceMode = document.getElementById('price-filter')?.value || 'all';
       const infoMode = document.getElementById('info-filter')?.value || 'all';
 
-      // Strictly exclude deleted products
       let filtered = [...products].filter(p => !deletedProductIds.includes(p.id));
 
       if (activeTagFilter !== 'All') filtered = filtered.filter(p => p.tags.includes(activeTagFilter) || p.type === activeTagFilter);
@@ -3003,9 +3183,6 @@
       }
     }
 
-    // -------------------------------------------------------------------------
-    // PERMANENT DELETION LOGIC (OWNER & CREATOR ONLY - CANNOT RETURN)
-    // -------------------------------------------------------------------------
     function deleteListing(id) {
       const p = products.find(i => i.id === id);
       if (!p) return;
@@ -3018,15 +3195,12 @@
         return;
       }
 
-      // Add to permanent deletion blacklist
       if (!deletedProductIds.includes(id)) {
         deletedProductIds.push(id);
       }
 
-      // Remove from current memory array
       products = products.filter(i => i.id !== id);
 
-      // Clean Supabase database
       if (supabaseClient) {
         supabaseClient.from('products').delete().eq('id', id).then(() => {});
       }
@@ -3040,13 +3214,12 @@
     }
 
     // -------------------------------------------------------------------------
-    // INBOX SYSTEM WITH READ AUTO-CLEARING (FIX 3)
+    // INBOX SYSTEM WITH READ AUTO-CLEARING
     // -------------------------------------------------------------------------
     function renderUserInbox() {
       if (!currentUser) return;
       const list = currentUser.inbox || [];
       
-      // Auto-mark all messages as read upon viewing
       let newlyRead = false;
       list.forEach(m => {
         if (!m.read) {
@@ -3149,8 +3322,10 @@
       document.getElementById('admin-beg-pct').value = appConfig.beginnerSalePct;
       if (document.getElementById('admin-restart-pct')) document.getElementById('admin-restart-pct').value = appConfig.restartPenaltyPct;
       syncDynamicPricingLabels();
+      renderAdminCustomPaymentMethods();
+      loadSponsoredAdSettings();
 
-      // 1. Pending Queue (Bybit / Off-chain Submissions with Interactive Reply System)
+      // 1. Pending Queue
       const pendingUsers = Object.values(usersDB).filter(u => u && (u.beginnerSettlementStatus === 'pending_review' || u.membershipSettlementStatus === 'pending_review'));
       const pendingBox = document.getElementById('admin-pending-settlements-table');
       if (pendingBox) {
@@ -3221,7 +3396,7 @@
             }).join('');
       }
 
-      // 3. Registered Sellers Table with Exact Remaining Days & Admin Reset Feature
+      // 3. Registered Sellers Table
       const emails = Object.keys(usersDB);
       document.getElementById('admin-users-count').textContent = emails.length;
       document.getElementById('admin-users-table').innerHTML = emails.map(em => {
@@ -3412,11 +3587,31 @@
       alert('✅ Profile Settings Saved!');
     }
 
+    // -------------------------------------------------------------------------
+    // NEW FEATURE 1: DYNAMIC PROFILE & FOLLOW SYSTEM
+    // -------------------------------------------------------------------------
+    function updatePublicProfileFollowUI(isFollowing) {
+      const btn = document.getElementById('pub-prof-follow-btn');
+      const icon = document.getElementById('pub-prof-follow-icon');
+      const text = document.getElementById('pub-prof-follow-text');
+      if (!btn) return;
+      if (isFollowing) {
+        btn.className = 'px-5 py-2.5 rounded-xl text-xs font-extrabold bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 hover:bg-emerald-900/80 cursor-pointer';
+        if (icon) icon.textContent = '✓';
+        if (text) text.textContent = 'Following';
+      } else {
+        btn.className = 'gold-btn px-5 py-2.5 rounded-xl text-xs font-extrabold cursor-pointer';
+        if (icon) icon.textContent = '＋';
+        if (text) text.textContent = 'Follow Creator';
+      }
+    }
+
     function openPublicCreatorProfile(creatorEmailOrName) {
       closeProductModal();
-      let targetUser = usersDB[creatorEmailOrName?.toLowerCase()] || Object.values(usersDB).find(u => u.name.toLowerCase() === (creatorEmailOrName || '').toLowerCase()) || { name: creatorEmailOrName, email: creatorEmailOrName, avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&auto=format&fit=crop&q=80', bio: 'Verified Creator on AL-TUJAR VAULTS.', followersCount: 10 };
+      let targetUser = usersDB[creatorEmailOrName?.toLowerCase()] || Object.values(usersDB).find(u => u.name.toLowerCase() === (creatorEmailOrName || '').toLowerCase()) || { name: creatorEmailOrName, email: creatorEmailOrName, avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&auto=format&fit=crop&q=80', bio: 'Verified Creator on AL-TUJAR VAULTS.', followersCount: 142 };
       currentViewedProfileEmail = (targetUser.email || '').toLowerCase();
       const creatorProducts = products.filter(p => !deletedProductIds.includes(p.id) && ((p.creatorEmail || '').toLowerCase() === currentViewedProfileEmail || p.creator === targetUser.name));
+      
       document.getElementById('pub-prof-name').textContent = targetUser.name;
       document.getElementById('pub-prof-bio').textContent = targetUser.bio || '';
       document.getElementById('pub-prof-avatar').src = targetUser.avatar;
@@ -3426,6 +3621,9 @@
       const showFlag = targetUser.beginnerFlagged && (isOwnerLoggedIn() || (currentUser && currentUser.email.toLowerCase() === currentViewedProfileEmail) || targetUser.beginnerFlagVisibility === 'public');
       const pubFlag = document.getElementById('pub-prof-beginner-flag');
       if (pubFlag) pubFlag.style.display = showFlag ? 'inline-block' : 'none';
+
+      const isFollowing = Boolean(currentUser?.following && currentUser.following.includes(currentViewedProfileEmail));
+      updatePublicProfileFollowUI(isFollowing);
 
       document.getElementById('public-profile-products-grid').innerHTML = creatorProducts.map(p => renderProductCardHTML(p)).join('');
       ['shop', 'guide', 'studio', 'rules', 'admin'].forEach(v => {
@@ -3441,18 +3639,22 @@
       if (!currentViewedProfileEmail) return;
       currentUser.following = currentUser.following || [];
       const target = usersDB[currentViewedProfileEmail];
-      if (currentUser.following.includes(currentViewedProfileEmail)) {
+      const isFollowing = currentUser.following.includes(currentViewedProfileEmail);
+
+      if (isFollowing) {
         currentUser.following = currentUser.following.filter(e => e !== currentViewedProfileEmail);
         if (target && target.followersCount > 0) target.followersCount -= 1;
       } else {
         currentUser.following.push(currentViewedProfileEmail);
         if (target) target.followersCount = (target.followersCount || 0) + 1;
       }
+      
       saveAllState();
       if (target) {
         document.getElementById('pub-prof-followers').textContent = target.followersCount;
         syncUserToCloud(target);
       }
+      updatePublicProfileFollowUI(!isFollowing);
     }
 
     function attemptOpenUploadTab() {
@@ -3506,7 +3708,6 @@
       saveAllState(); updateSavedAndCartBadges(); renderMarketplaceGrid();
     }
 
-    // FIX 3 APPLIED: Only show badge when there are genuinely UNREAD messages; hide when 0
     function updateSavedAndCartBadges() {
       if (!currentUser) return;
       const favBadge = document.getElementById('saved-count-badge');
@@ -3565,6 +3766,7 @@
       renderTagFilterStrip();
       renderMarketplaceGrid();
       updateGoogleSEOSchema();
+      renderCheckoutCustomPaymentMethods();
 
       const savedLang = localStorage.getItem('altujar_master_lang') || 'en';
       if (savedLang !== 'en') changeLanguage(savedLang);
@@ -3582,6 +3784,7 @@
       }
 
       initCloudData();
+      checkAndDisplaySponsoredAd();
     });
   </script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
