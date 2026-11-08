@@ -378,8 +378,8 @@
           </h1>
           
           <p class="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl">
-            <strong>Normal Full Membership ($<span class="dyn-link-sub-lbl">23</span>/mo):</strong> One simple all-access pass! Upload <strong>both direct digital vault files (.cube, .xmp, .dng, .mp3, .wav, .mp4, HTML, PNG, PDF, ZIP) AND indirect physical gear links (Amazon, Electronics, Studio Hardware)</strong> under one roof with zero separation!<br>
-            <strong>🌱 Special 3-Month Beginner Bundle:</strong> Upload both digital files & physical links for 90 days starting from <strong>$0 upfront</strong> ($<span class="dyn-beg-base-lbl">23</span> × 3 months + <span class="dyn-beg-pct-lbl">23</span>% per product uploaded), then settle from your earnings!
+            <strong>Normal Full Membership ($<span class="dyn-link-sub-lbl">23</span>/mo):</strong> One unified pass for both direct vault downloads and physical gear links!<br>
+            <strong>🌱 Special 3-Month Beginner Bundle:</strong> Upload both digital files and physical gear links for 3 months starting from <strong>$0 upfront</strong> ($<span class="dyn-beg-base-lbl">23</span> × 3 months + <span class="dyn-beg-pct-lbl">23</span>% per product uploaded), then settle from your earnings!
           </p>
           <div class="flex flex-wrap gap-2.5 pt-1">
             <button type="button" onclick="requireSellerAuthAndOpenMembership()" class="gold-btn px-5 py-3 rounded-xl text-xs sm:text-sm font-extrabold cursor-pointer">
@@ -407,7 +407,7 @@
       </div>
     </section>
 
-    <!-- Search & Filter Controls -->
+    <!-- Search, Filter & Top 100 Best Sellers Switcher -->
     <section class="bg-obsidianCard border border-slate-800 rounded-2xl p-4 sm:p-5 space-y-4 shadow-xl">
       <div class="flex flex-col lg:flex-row gap-3 items-stretch lg:items-center justify-between">
         <div class="relative flex-1">
@@ -451,7 +451,7 @@
     <section id="marketplace-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></section>
   </main>
 
-  <!-- PUBLIC GUIDE VIEW (DETAILED PAYMENT & BUNDLE BREAKDOWNS) -->
+  <!-- PUBLIC GUIDE VIEW -->
   <section id="view-guide" style="display: none;" class="flex-1 max-w-6xl w-full mx-auto px-3 sm:px-6 py-6 space-y-6 text-xs sm:text-sm">
     <div class="bg-obsidianCard border border-amber-500/30 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
       <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4">
@@ -462,19 +462,17 @@
         <button type="button" onclick="switchMainTab('shop')" class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-amber-300 font-bold text-xs cursor-pointer">← Back to Marketplace</button>
       </div>
 
-      <!-- DETAILED MEMBERSHIP & BUNDLE EXPLANATION -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        
         <div class="bg-slate-950 border border-amber-500/40 rounded-2xl p-5 space-y-3">
           <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-lg">💎</div>
           <h3 class="font-royal text-base font-bold text-amber-300">1. Normal Full Membership ($23/mo All-Inclusive)</h3>
           <p class="text-slate-300 leading-relaxed">
-            We have unified the store! Members no longer have to pick between digital or physical passes. For a flat <strong>$23/month</strong>, you unlock:
+            One simple all-access pass! Members no longer have to pick between digital or physical passes. For a flat <strong>$23/month</strong>, you unlock:
           </p>
           <ul class="space-y-1.5 text-slate-300 list-disc pl-4 text-xs">
             <li><strong>Direct Digital File Hosting:</strong> Sell Presets (.cube, .xmp, .dng), Audio SFX (.mp3, .wav), Video assets (.mp4), Code templates (.html, .zip), and PDF e-books with direct download delivery.</li>
-            <li><strong>Physical Gear & External Links:</strong> Promote physical gear (Amazon, camera gear, gym accessories, external sites) seamlessly alongside digital assets.</li>
-            <li><strong>Automated Settlement:</strong> Receive buyer payouts directly to your personal receiving wallet.</li>
+            <li><strong>Physical Gear & External Links:</strong> Promote physical hardware (Amazon, camera gear, gym accessories, electronics) seamlessly alongside digital assets.</li>
+            <li><strong>Direct Payouts:</strong> Buyers transfer payments straight to your receiving wallet.</li>
           </ul>
         </div>
 
@@ -491,22 +489,19 @@
             <li><strong>Debt Lockout Rule:</strong> Enrolled beginner accounts cannot sign out or delete accounts until their accrued bundle balance is settled. Once paid, you continue on the standard $23/mo plan.</li>
           </ul>
         </div>
-
       </div>
 
-      <!-- DETAILED PAYMENT PROCESSES -->
       <div class="bg-slate-950 border border-sky-500/40 rounded-2xl p-5 space-y-4">
         <h3 class="font-royal text-base font-bold text-sky-300 flex items-center gap-2">
           <span>💳</span> 3. Payment Verification: Instant Solana vs. Bybit Waiting Queue
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-          
           <div class="p-3.5 rounded-xl bg-slate-900 border border-emerald-500/30 space-y-2">
             <span class="font-bold text-emerald-300 text-sm flex items-center gap-1.5">
               <span>⚡</span> Option A: Instant Solana Blockchain Verification
             </span>
             <p class="text-slate-300 leading-relaxed">
-              When transferring funds via <strong>Solana (SOL, USDT on Solana, USDC on Solana)</strong> to any of our listed Solana addresses (including our Cake Wallet):
+              When transferring funds via <strong>Solana (SOL, USDT on Solana, USDC on Solana)</strong> to any of our registered Solana addresses (including Cake Wallet):
             </p>
             <ol class="list-decimal pl-4 space-y-1 text-slate-400">
               <li>Send the exact dollar equivalent to the designated Solana wallet.</li>
@@ -528,13 +523,12 @@
               <li>Your account enters the <strong>⏳ Waiting Queue</strong>. The platform owner manually matches your deposit against Bybit internal ledgers inside the Treasury room and activates your account.</li>
             </ol>
           </div>
-
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PUBLIC CREATOR PROFILE VIEW (WITH DYNAMIC FOLLOW BUTTON) -->
+  <!-- PUBLIC CREATOR PROFILE VIEW -->
   <section id="view-public-profile" style="display: none;" class="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 py-6 space-y-6">
     <button type="button" onclick="switchMainTab('shop')" class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs font-semibold text-amber-300 cursor-pointer">← Back to Marketplace</button>
     <div class="bg-obsidianCard border border-amber-500/30 rounded-3xl overflow-hidden shadow-2xl">
@@ -545,7 +539,7 @@
           <div>
             <div class="flex items-center gap-2 flex-wrap">
               <h2 id="pub-prof-name" class="font-royal text-xl font-extrabold text-white"></h2>
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300">✔ Verified Creator</span>
+              <span id="pub-prof-verified-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300">✔ Verified Creator</span>
               <span id="pub-prof-beginner-flag" style="display: none;" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">🌱 Rising New Seller</span>
             </div>
             <p id="pub-prof-bio" class="text-xs text-slate-300 mt-1 max-w-xl"></p>
@@ -615,7 +609,7 @@
       </div>
     </div>
 
-    <!-- Product Upload Form (Handles Both Digital Files & Physical Gear Seamlessly) -->
+    <!-- Enhanced Product Upload Form (With Targeted Buyer Tagging & Purchase Limits) -->
     <div id="studio-sub-upload" style="display: none;" class="bg-obsidianCard border border-slate-800 rounded-2xl p-5 space-y-5">
       <div id="upload-locked-gate" class="text-center py-8 px-4 max-w-lg mx-auto space-y-4">
         <div class="text-3xl">🔒</div>
@@ -628,7 +622,7 @@
         <div class="flex items-center justify-between border-b border-slate-800 pb-3">
           <div>
             <h3 class="font-royal text-lg font-bold text-amber-300">Publish to AL-TUJAR VAULTS (Digital Files & Physical Gear)</h3>
-            <p class="text-slate-400">One unified membership lets you upload both direct digital downloads and external product links!</p>
+            <p class="text-slate-400">Unified access allows direct files, external physical gear, targeted exclusive buyers, and limited editions.</p>
           </div>
           <div class="bg-slate-950 border border-amber-500/40 rounded-xl px-4 py-2 text-right">
             <span class="text-[10px] uppercase text-slate-400 block">Info Score</span>
@@ -650,6 +644,31 @@
               <option value="direct_web">📥 Upload Direct File on AL-TUJAR VAULTS</option>
               <option value="external_link">🔗 Connect Indirect External Storefront Link</option>
             </select>
+          </div>
+        </div>
+
+        <!-- NEW FEATURE: TARGETED EXCLUSIVE BUYER & PURCHASE LIMIT CONTROLS -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3.5 rounded-2xl bg-slate-950 border border-amber-500/25">
+          <div>
+            <label class="font-bold text-amber-300 block mb-1 flex items-center gap-1.5">
+              <span>🎯</span> Targeted Buyer Exclusive Access (Optional)
+            </label>
+            <input type="text" id="up-targeted-user" placeholder="Enter recipient email or username (e.g. buyer@gmail.com)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white outline-none focus:border-amber-400">
+            <span class="text-[10px] text-slate-400 block mt-1">Leave empty for public marketplace. If filled, only that tagged person can view and buy this listing!</span>
+          </div>
+          <div>
+            <label class="font-bold text-emerald-300 block mb-1 flex items-center gap-1.5">
+              <span>📦</span> Purchase Limit & Availability Mode *
+            </label>
+            <div class="flex gap-2">
+              <select id="up-availability-mode" onchange="handleAvailabilityModeChange()" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white font-semibold cursor-pointer">
+                <option value="unlimited">🌐 Unlimited Access (Everyone can buy anytime)</option>
+                <option value="one_time">⚡ One-Time Only (1 buyer only, then sold out)</option>
+                <option value="limited_qty">🔢 Limited Quantity (Set stock limit)</option>
+              </select>
+              <input type="number" id="up-limited-qty-input" min="1" placeholder="Qty (e.g. 10)" style="display: none;" class="w-24 bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-amber-300 font-bold outline-none">
+            </div>
+            <span class="text-[10px] text-slate-400 block mt-1">Controls whether the product can be bought repeatedly or has limited editions.</span>
           </div>
         </div>
 
@@ -830,7 +849,7 @@
         </div>
       </div>
 
-      <!-- DYNAMIC SOLANA RECEIVING WALLETS MANAGER (CAKE, PHANTOM, UNSTOPPABLE) -->
+      <!-- DYNAMIC SOLANA RECEIVING WALLETS MANAGER -->
       <div class="bg-obsidianCard border border-emerald-500/40 rounded-2xl p-5 space-y-3">
         <div class="flex justify-between items-center border-b border-slate-800 pb-2">
           <div class="flex items-center gap-2">
@@ -936,16 +955,38 @@
         <button type="button" onclick="revokeSellerEmailMembership()" class="py-2 rounded-xl bg-rose-500/20 text-rose-300 font-bold cursor-pointer">🚫 Revoke</button>
       </div>
 
-      <!-- Core Sliders & Receiving Addresses -->
-      <div class="bg-obsidianCard border border-slate-800 rounded-2xl p-5 grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <div><label class="text-slate-400 block mb-1">Full Pass ($)</label><input type="number" id="admin-link-price" oninput="updateAdminPricingSliders()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-amber-300 font-bold"></div>
-        <div><label class="text-slate-400 block mb-1">Beginner Base ($/mo)</label><input type="number" id="admin-beg-base" oninput="updateAdminPricingSliders()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white font-bold"></div>
-        <div><label class="text-slate-400 block mb-1">Per-Upload Add (%)</label><input type="number" id="admin-beg-pct" oninput="updateAdminPricingSliders()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-rose-300 font-bold"></div>
-        <div><label class="text-slate-400 block mb-1">Restart Fee (%)</label><input type="number" id="admin-restart-pct" oninput="updateAdminPricingSliders()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-amber-200 font-bold"></div>
-        <input type="text" id="adm-wallet-cex" placeholder="Bybit UID (587086948)" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-amber-200 font-mono">
-        <input type="text" id="adm-wallet-unstoppable" placeholder="Primary Solana Wallet" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-emerald-300 font-mono">
-        <input type="text" id="adm-wallet-cake" placeholder="Cake Wallet (Solana USD Address)" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-purple-300 font-mono">
-        <button type="button" onclick="saveAdminTreasurySettings()" class="gold-btn rounded-xl font-bold py-2 cursor-pointer">💾 Save Settings</button>
+      <!-- Core Sliders & Settings Row (WITH NEW + ADD WALLET & SAVE SETTINGS BUTTONS) -->
+      <div class="bg-obsidianCard border border-slate-800 rounded-2xl p-5 space-y-3">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div><label class="text-slate-400 block mb-1">Full Pass ($)</label><input type="number" id="admin-link-price" oninput="updateAdminPricingSliders()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-amber-300 font-bold"></div>
+          <div><label class="text-slate-400 block mb-1">Beginner Base ($/mo)</label><input type="number" id="admin-beg-base" oninput="updateAdminPricingSliders()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white font-bold"></div>
+          <div><label class="text-slate-400 block mb-1">Per-Upload Add (%)</label><input type="number" id="admin-beg-pct" oninput="updateAdminPricingSliders()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-rose-300 font-bold"></div>
+          <div><label class="text-slate-400 block mb-1">Restart Fee (%)</label><input type="number" id="admin-restart-pct" oninput="updateAdminPricingSliders()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-amber-200 font-bold"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 border-t border-slate-800">
+          <div>
+            <label class="text-slate-400 block mb-1">Bybit UID (Off-Chain Internal)</label>
+            <input type="text" id="adm-wallet-cex" placeholder="Bybit UID: 587086948" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-amber-200 font-mono">
+          </div>
+          <div>
+            <label class="text-slate-400 block mb-1">Primary Solana Wallet Address</label>
+            <input type="text" id="adm-wallet-unstoppable" placeholder="Primary Solana Wallet" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-emerald-300 font-mono">
+          </div>
+          <div>
+            <label class="text-slate-400 block mb-1">Cake Wallet (Solana USD / USDT Address)</label>
+            <input type="text" id="adm-wallet-cake" placeholder="Cake Wallet Address" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-purple-300 font-mono">
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-end gap-2.5 pt-2">
+          <button type="button" onclick="promptQuickAddSolanaWallet()" class="px-4 py-2 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-bold text-xs cursor-pointer hover:bg-emerald-500/30">
+            ➕ Add Wallet
+          </button>
+          <button type="button" onclick="saveAdminTreasurySettings()" class="gold-btn px-6 py-2 rounded-xl font-bold text-xs cursor-pointer">
+            💾 Save Settings
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -954,7 +995,12 @@
   <div id="product-detail-modal" style="display: none;" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md items-center justify-center p-3 overflow-y-auto">
     <div class="bg-obsidianCard border border-amber-500/40 rounded-3xl max-w-3xl w-full p-5 space-y-4 max-h-[92vh] overflow-y-auto shadow-2xl text-xs my-auto">
       <div class="flex items-start justify-between border-b border-slate-800 pb-3">
-        <h3 id="modal-prod-title" class="font-royal text-lg sm:text-2xl font-extrabold text-white"></h3>
+        <div>
+          <h3 id="modal-prod-title" class="font-royal text-lg sm:text-2xl font-extrabold text-white"></h3>
+          <div id="modal-exclusive-badge" style="display: none;" class="mt-1 inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-purple-500/20 border border-purple-500/40 text-purple-300">
+            🎯 Targeted Exclusive Drop
+          </div>
+        </div>
         <button type="button" onclick="closeProductModal()" class="p-2 rounded-xl bg-slate-900 text-slate-400 cursor-pointer">✕</button>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
@@ -973,7 +1019,10 @@
           <div class="space-y-3">
             <div class="flex items-center justify-between">
               <span id="modal-prod-price" class="text-2xl font-extrabold gold-gradient-text"></span>
-              <span id="modal-info-score" class="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-300 font-bold"></span>
+              <div class="flex items-center gap-1.5">
+                <span id="modal-stock-badge" class="px-2 py-1 rounded-lg bg-slate-900 border border-slate-700 text-[11px] font-bold text-amber-300"></span>
+                <span id="modal-info-score" class="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-300 font-bold"></span>
+              </div>
             </div>
             <p id="modal-prod-desc" class="text-slate-300 leading-relaxed"></p>
             <div id="modal-direct-vault-box" style="display: none;" class="bg-emerald-950/30 border border-emerald-500/40 rounded-xl p-3 space-y-2">
@@ -1011,7 +1060,6 @@
         <button type="button" onclick="closeNativeCheckoutModal()" class="p-2 rounded-xl bg-slate-900 text-slate-400 cursor-pointer">✕</button>
       </div>
 
-      <!-- Single Unified Plan Card -->
       <div class="bg-slate-950 border-2 border-amber-500 rounded-2xl p-4 space-y-1.5 text-left">
         <div class="flex justify-between items-center">
           <span class="font-bold text-amber-300 text-sm">🔗 Full All-Inclusive Membership</span>
@@ -1023,11 +1071,7 @@
       </div>
 
       <div id="checkout-rail-details" class="bg-slate-950 border border-slate-800 rounded-2xl p-3.5 space-y-2"></div>
-
-      <!-- Dynamic Multi-Solana Wallets Container -->
       <div id="checkout-solana-wallets-container" class="space-y-1.5 pt-1"></div>
-
-      <!-- Dynamic Custom Payment Methods Sync Container -->
       <div id="checkout-custom-methods-container" class="space-y-1.5 pt-1"></div>
 
       <div class="space-y-2 bg-slate-950/80 border border-amber-500/30 p-3.5 rounded-2xl">
@@ -1048,7 +1092,6 @@
         </div>
       </div>
 
-      <!-- Special $0 Upfront Beginner Offer (Always Viewable on the Web) -->
       <div id="beginner-offer-box" class="pt-3 border-t border-amber-500/30 space-y-3">
         <button type="button" onclick="toggleBeginnerOfferTerms()" class="w-full py-2.5 px-4 rounded-xl bg-amber-500/15 border border-amber-400/50 text-amber-300 font-extrabold text-center cursor-pointer">
           🌱 Unable to afford it?, are you a beginner? Click for our 3-Month $0 Upfront Offer!
@@ -1145,7 +1188,8 @@
       </div>
       <div id="footer-social-strip" class="flex flex-wrap gap-2 pt-3 border-t border-slate-900"></div>
     </div>
-    </footer>  <script>
+  </footer>
+    <script>
     // -------------------------------------------------------------------------
     // SUPABASE CLIENT INITIALIZATION (SAFE INITIALIZATION)
     // -------------------------------------------------------------------------
@@ -1203,7 +1247,7 @@
     }
 
     // -------------------------------------------------------------------------
-    // PLATFORM CONFIGURATION (UNIFIED $23 TIER, MULTI-SOLANA & SPONSORED ADS)
+    // PLATFORM CONFIGURATION (UNIFIED $23 TIER, CAKE SOLANA & MULTI-WALLETS)
     // -------------------------------------------------------------------------
     const DEFAULT_CONFIG = {
       subPrice: 23,
@@ -1214,11 +1258,11 @@
       wallets: {
         cex: 'Bybit UID: 587086948',
         unstoppable: 'F4c9TugqAVvePSDhTaZF9TyL7jVabpqpfq9fZtc4zLaH',
-        cake: '98VDvhZxEDbFaecPrXfD7qjKzLyTm9EuAcEqYxQ11'
+        cake: '98VDwnZxEDbFaecPrX9DDwojKzALyTnM9EuAc6YXuQ1t'
       },
       solanaWallets: [
         { id: 1, label: 'Primary Solana (Instant Auto-Verify)', address: 'F4c9TugqAVvePSDhTaZF9TyL7jVabpqpfq9fZtc4zLaH' },
-        { id: 2, label: 'Cake Wallet (Solana USD: SOL, USDT, USDC)', address: '98VDvhZxEDbFaecPrXfD7qjKzLyTm9EuAcEqYxQ11' }
+        { id: 2, label: 'Cake Wallet (Solana USD: SOL, USDT, USDC)', address: '98VDwnZxEDbFaecPrX9DDwojKzALyTnM9EuAc6YXuQ1t' }
       ],
       socials: {
         telegram: 'https://t.me/Altujarvaults',
@@ -1262,6 +1306,10 @@
         tags: ['Digital', 'HTML & Code', 'PDF & Guides'],
         creator: 'CareerVault Official',
         creatorEmail: OWNER_EMAIL,
+        targetedUser: '',
+        availabilityMode: 'unlimited',
+        stockQty: 0,
+        isSoldOut: false,
         postedAt: Date.now() - 7200000,
         infoScore: 100,
         rating: 5.0,
@@ -1281,7 +1329,7 @@
         url: '#direct-vault-download',
         directFileData: 'data:text/plain;base64,Q2luZW1hdGljIExVVCBQYWNr',
         directFileName: 'Obsidian-Gold-Presets-Pack.zip',
-        sellerWallet: 'F4c9TugqAVvePSDhTaZF9TyL7jVabpqpfq9fZtc4zLaH',
+        sellerWallet: '98VDwnZxEDbFaecPrX9DDwojKzALyTnM9EuAc6YXuQ1t',
         desc: '25 pro color grading .CUBE LUTs and .XMP/.DNG mobile presets for Premiere Pro, CapCut, DaVinci Resolve, and Lightroom.',
         discount: 'Free Before/After Video Grading Guide',
         video: 'https://www.w3schools.com/html/mov_bbb.mp4',
@@ -1290,6 +1338,10 @@
         tags: ['Presets', 'Digital'],
         creator: 'Amina Tech Studio',
         creatorEmail: 'amina@techstudio.io',
+        targetedUser: '',
+        availabilityMode: 'unlimited',
+        stockQty: 0,
+        isSoldOut: false,
         postedAt: Date.now() - 43200000,
         infoScore: 100,
         rating: 4.9,
@@ -1318,6 +1370,10 @@
         tags: ['Audio & SFX', 'Digital'],
         creator: 'Kaleb Hardware Lab',
         creatorEmail: 'kaleb@hardwarelab.io',
+        targetedUser: '',
+        availabilityMode: 'unlimited',
+        stockQty: 0,
+        isSoldOut: false,
         postedAt: Date.now() - 86400000,
         infoScore: 98,
         rating: 4.9,
@@ -1337,7 +1393,7 @@
         avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&auto=format&fit=crop&q=80',
         banner: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&q=80',
         bio: 'Building color presets, LUTs & Notion systems for creators.',
-        payout: 'F4c9TugqAVvePSDhTaZF9TyL7jVabpqpfq9fZtc4zLaH',
+        payout: '98VDwnZxEDbFaecPrX9DDwojKzALyTnM9EuAc6YXuQ1t',
         membershipType: 'none',
         membershipExpiresAt: 0,
         isVerifiedCreator: true,
@@ -1381,7 +1437,13 @@
       if (Array.isArray(localProds)) {
         localProds.forEach(item => {
           if (item && item.id && !deletedProductIds.includes(item.id)) {
-            prodMap.set(item.id, item);
+            prodMap.set(item.id, {
+              targetedUser: '',
+              availabilityMode: 'unlimited',
+              stockQty: 0,
+              isSoldOut: false,
+              ...item
+            });
           }
         });
       }
@@ -1480,6 +1542,10 @@
           tags: prod.tags || [],
           creator: prod.creator || '',
           creator_email: (prod.creatorEmail || '').toLowerCase(),
+          targeted_user: prod.targetedUser || '',
+          availability_mode: prod.availabilityMode || 'unlimited',
+          stock_qty: Number(prod.stockQty || 0),
+          is_sold_out: Boolean(prod.isSoldOut),
           posted_at: Number(prod.postedAt || Date.now()),
           info_score: Number(prod.infoScore || 100),
           rating: Number(prod.rating || 5.0),
@@ -1566,6 +1632,10 @@
                 tags: Array.isArray(p.tags) ? p.tags : [],
                 creator: p.creator,
                 creatorEmail: p.creator_email,
+                targetedUser: p.targeted_user || '',
+                availabilityMode: p.availability_mode || 'unlimited',
+                stockQty: Number(p.stock_qty || 0),
+                isSoldOut: Boolean(p.is_sold_out),
                 postedAt: Number(p.posted_at || Date.now()),
                 infoScore: Number(p.info_score || 100),
                 rating: Number(p.rating || 5.0),
@@ -1631,7 +1701,7 @@
         "@context": "https://schema.org",
         "@type": "ItemList",
         "name": "AL-TUJAR VAULTS Global Digital & Physical Marketplace",
-        "itemListElement": products.filter(p => !p.frozen && !deletedProductIds.includes(p.id)).map((p, idx) => ({
+        "itemListElement": products.filter(p => !p.frozen && !p.isSoldOut && !p.targetedUser && !deletedProductIds.includes(p.id)).map((p, idx) => ({
           "@type": "ListItem",
           "position": idx + 1,
           "item": {
@@ -1646,22 +1716,7 @@
               "priceCurrency": "USD",
               "price": p.price.toFixed(2),
               "availability": "https://schema.org/InStock",
-              "url": window.location.href,
-              "hasMerchantReturnPolicy": {
-                "@type": "MerchantReturnPolicy",
-                "applicableCountry": "US",
-                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-              },
-              "shippingDetails": {
-                "@type": "OfferShippingDetails",
-                "shippingRate": { "@type": "MonetaryAmount", "value": "0.00", "currency": "USD" },
-                "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "US" },
-                "deliveryTime": {
-                  "@type": "ShippingDeliveryTime",
-                  "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" },
-                  "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" }
-                }
-              }
+              "url": window.location.href
             }
           }
         }))
@@ -1814,7 +1869,7 @@
 
     function closeAuthGateModal() {
       if (hasUnpaidBeginnerDeviceLock() && !currentUser) {
-        alert('🔒 Your account has an active 3-Month Beginner Bundle balance. Please sign in to that account and settle your balance.');
+        alert('🔒 Your account has an active 3-Month Beginner Bundle balance. Please sign in to settle.');
         return;
       }
       closeModal('mandatory-auth-gate');
@@ -1989,6 +2044,23 @@
       labelInput.value = '';
       addrInput.value = '';
       alert(`✅ Added Solana wallet: "${label}"!`);
+    }
+
+    function promptQuickAddSolanaWallet() {
+      if (!isOwnerLoggedIn()) return;
+      const label = prompt("Enter wallet name/label (e.g. Cake Wallet Solana USD, Secondary Phantom):");
+      if (!label || !label.trim()) return;
+      const addr = prompt("Enter full Solana address (~44 characters):");
+      if (!addr || !addr.trim() || addr.trim().length < 32) {
+        alert("Invalid Solana address.");
+        return;
+      }
+      appConfig.solanaWallets = appConfig.solanaWallets || [];
+      appConfig.solanaWallets.push({ id: Date.now(), label: label.trim(), address: addr.trim() });
+      saveAllState();
+      renderAdminSolanaWallets();
+      renderCheckoutSolanaWallets();
+      alert(`✅ Added wallet "${label.trim()}"!`);
     }
 
     function adminDeleteSolanaWallet(id) {
@@ -2471,8 +2543,21 @@
     }
 
     // -------------------------------------------------------------------------
-    // AUTOMATED DIRECT DOWNLOAD PURCHASES
+    // AUTOMATED DIRECT DOWNLOAD PURCHASES & STOCK TRACKING
     // -------------------------------------------------------------------------
+    function markProductPurchased(p) {
+      p.clicks = (p.clicks || 0) + 1;
+      if (p.availabilityMode === 'one_time') {
+        p.isSoldOut = true;
+      } else if (p.availabilityMode === 'limited_qty') {
+        p.stockQty = Math.max(0, (p.stockQty || 1) - 1);
+        if (p.stockQty === 0) p.isSoldOut = true;
+      }
+      saveAllState();
+      syncProductToCloud(p);
+      renderMarketplaceGrid();
+    }
+
     async function triggerDirectDigitalPurchaseAndDownload(p) {
       if (!currentUser) {
         closeProductModal();
@@ -2480,8 +2565,13 @@
         return;
       }
 
+      if (p.isSoldOut) {
+        alert('⚠️ This item is currently SOLD OUT.');
+        return;
+      }
+
       if (p.price === 0) {
-        incrementProductClick(p.id);
+        markProductPurchased(p);
         executeFileDownload(p);
         return;
       }
@@ -2499,7 +2589,7 @@
       const ref = input.trim();
 
       if (ref === OWNER_PASS) {
-        incrementProductClick(p.id);
+        markProductPurchased(p);
         executeFileDownload(p);
         alert('👑 Master Key Accepted: Digital file unlocked!');
         return;
@@ -2518,7 +2608,7 @@
           usedPaymentSignatures.push(ref);
           syncSignatureToCloud(ref);
 
-          incrementProductClick(p.id);
+          markProductPurchased(p);
           executeFileDownload(p);
           alert(`🎉 Payment Verified! Received $${solCheck.totalUsdPaid.toFixed(2)} USD in slot #${solCheck.slot}.\nDownload starting.`);
           return;
@@ -2937,9 +3027,64 @@
       }
     }
 
+    function adminResetUserToUnpaid(targetEmail) {
+      if (!isOwnerLoggedIn()) return;
+      const cleanEmail = (targetEmail || '').trim().toLowerCase();
+      const u = usersDB[cleanEmail];
+      if (!u) return;
+
+      if (!confirm(`Are you sure you want to RESET "${u.name}" (${cleanEmail}) to UNPAID / FREE?\n\nThis will strip their membership, set days left to 0, and re-arm all upload locks.`)) {
+        return;
+      }
+
+      u.membershipType = 'none';
+      u.membershipExpiresAt = 0;
+      u.beginnerFlagged = false;
+      u.beginnerPaidSettled = false;
+      u.beginnerStartAt = 0;
+      u.beginnerExpiresAt = 0;
+      u.beginnerAutoBanAt = 0;
+      u.beginnerUploadsCount = 0;
+      u.beginnerSettlementStatus = 'none';
+      u.membershipSettlementStatus = 'none';
+      u.submittedTXID = '';
+      u.submittedMembershipRef = '';
+
+      if (deviceBeginnerEmailRecord === cleanEmail) {
+        deviceBeginnerEmailRecord = '';
+      }
+
+      u.inbox = u.inbox || [];
+      u.inbox.unshift({
+        from: 'AL-TUJAR VAULTS Administration',
+        subject: '🔒 Seller Pass Status Notice: Reset to Unpaid',
+        body: 'Your seller membership has expired or been reset to Unpaid Free status by administration. To upload or publish new products, please renew your membership.',
+        date: new Date().toLocaleDateString(),
+        read: false
+      });
+
+      if (currentUser && currentUser.email.toLowerCase() === cleanEmail) {
+        currentUser = u;
+        enforceUploadGateUI();
+        renderCreatorStudio();
+      }
+
+      saveAllState();
+      loadAdminInputs();
+      alert(`✅ Account for ${cleanEmail} has been reset to UNPAID / FREE status.`);
+    }
+
     // -------------------------------------------------------------------------
-    // PRODUCT UPLOAD ENGINE
+    // PRODUCT UPLOAD ENGINE & AVAILABILITY MODES
     // -------------------------------------------------------------------------
+    function handleAvailabilityModeChange() {
+      const mode = document.getElementById('up-availability-mode')?.value;
+      const qtyInput = document.getElementById('up-limited-qty-input');
+      if (qtyInput) {
+        qtyInput.style.display = (mode === 'limited_qty') ? 'block' : 'none';
+      }
+    }
+
     function handleUploadNatureChange() {
       const nature = document.getElementById('up-nature')?.value || 'Digital';
       const hostingBox = document.getElementById('up-hosting-mode-box');
@@ -3042,6 +3187,10 @@
         return;
       }
 
+      const targetedUser = (document.getElementById('up-targeted-user')?.value || '').trim();
+      const availabilityMode = document.getElementById('up-availability-mode')?.value || 'unlimited';
+      const limitedQty = parseInt(document.getElementById('up-limited-qty-input')?.value || '1', 10);
+
       const rawUrl = (document.getElementById('up-url').value || '').trim();
       const directFileData = document.getElementById('up-direct-file-data').value;
       const directFileName = document.getElementById('up-direct-file-name').value || 'Vault-Asset.zip';
@@ -3053,17 +3202,36 @@
       if (customTags) customTags.split(',').forEach(t => { const c = t.replace('#', '').trim(); if (c) selectedTags.push(c); });
 
       const newProduct = {
-        id: 'prod-' + Date.now(), title, price, type: document.getElementById('up-type').value, nature, hostingMode, thumb,
+        id: 'prod-' + Date.now(),
+        title,
+        price,
+        type: document.getElementById('up-type').value,
+        nature,
+        hostingMode,
+        thumb,
         url: hostingMode === 'direct_web' ? '#direct-vault-download' : rawUrl,
         directFileData: hostingMode === 'direct_web' ? directFileData : '',
         directFileName: hostingMode === 'direct_web' ? directFileName : '',
         sellerWallet: (document.getElementById('up-seller-wallet').value || '').trim() || currentUser.payout || appConfig.wallets.unstoppable,
-        desc, discount: (document.getElementById('up-discount').value || '').trim(),
+        desc,
+        discount: (document.getElementById('up-discount').value || '').trim(),
         video: (document.getElementById('up-video').value || '').trim(),
         audioPreview: (document.getElementById('up-audio-preview').value || '').trim(),
         hasSandbox: document.getElementById('up-sandbox').checked,
-        tags: selectedTags, creator: currentUser.name, creatorEmail: currentUser.email.toLowerCase(),
-        postedAt: Date.now(), infoScore, rating: 5.0, views: 1, clicks: 0, frozen: false, reports: []
+        tags: selectedTags,
+        creator: currentUser.name,
+        creatorEmail: currentUser.email.toLowerCase(),
+        targetedUser: targetedUser,
+        availabilityMode: availabilityMode,
+        stockQty: availabilityMode === 'one_time' ? 1 : (availabilityMode === 'limited_qty' ? Math.max(1, limitedQty) : 0),
+        isSoldOut: false,
+        postedAt: Date.now(),
+        infoScore,
+        rating: 5.0,
+        views: 1,
+        clicks: 0,
+        frozen: false,
+        reports: []
       };
 
       products.unshift(newProduct);
@@ -3080,7 +3248,7 @@
     }
 
     // -------------------------------------------------------------------------
-    // MARKETPLACE RENDERING
+    // MARKETPLACE RENDERING & TARGETED BUYER FILTERING
     // -------------------------------------------------------------------------
     function renderTagFilterStrip() {
       const strip = document.getElementById('tag-filter-strip');
@@ -3095,17 +3263,31 @@
       const inCart = (currentUser?.cart || []).includes(p.id);
       const allowDelete = canUserDeleteProduct(p);
       const isDirect = p.hostingMode === 'direct_web';
+
+      let availabilityBadge = '';
+      if (p.isSoldOut) {
+        availabilityBadge = '<span class="px-2 py-0.5 rounded-lg text-[10px] font-bold bg-rose-950 text-rose-300 border border-rose-500/40">🚫 Sold Out</span>';
+      } else if (p.availabilityMode === 'one_time') {
+        availabilityBadge = '<span class="px-2 py-0.5 rounded-lg text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-400/40">⚡ 1/1 Edition</span>';
+      } else if (p.availabilityMode === 'limited_qty') {
+        availabilityBadge = `<span class="px-2 py-0.5 rounded-lg text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/40">📦 ${p.stockQty} Left</span>`;
+      }
+
+      const targetedBadge = p.targetedUser ? `<span class="px-2 py-0.5 rounded-lg text-[10px] font-bold bg-purple-950 text-purple-300 border border-purple-500/50">🎯 Exclusive Drop</span>` : '';
+
       return `
         <article class="bg-obsidianCard border ${p.frozen ? 'border-rose-500/60' : 'border-slate-800'} hover:border-amber-500/50 rounded-2xl overflow-hidden flex flex-col justify-between shadow-lg group relative">
           <div>
             <div class="relative h-48 overflow-hidden bg-slate-950">
-              <img src="${sanitizeHTML(p.thumb)}" alt="${sanitizeHTML(p.title)}" class="w-full h-full object-cover ${p.frozen ? 'opacity-35 grayscale' : ''}" />
+              <img src="${sanitizeHTML(p.thumb)}" alt="${sanitizeHTML(p.title)}" class="w-full h-full object-cover ${p.frozen || p.isSoldOut ? 'opacity-35 grayscale' : ''}" />
               <div class="absolute top-2.5 left-2.5 flex flex-wrap gap-1">
                 ${rankBadge ? `<span class="px-2 py-0.5 rounded-lg text-[10px] font-extrabold bg-amber-500 text-slate-950 shadow-md">${rankBadge}</span>` : ''}
                 <span class="px-2 py-0.5 rounded-lg text-[10px] font-bold bg-slate-950/90 text-amber-300 border border-amber-400/30">${sanitizeHTML(p.type)}</span>
                 ${isDirect ? '<span class="px-2 py-0.5 rounded-lg text-[10px] font-bold bg-emerald-950/90 text-emerald-300">📥 Direct File</span>' : ''}
-                ${p.audioPreview ? '<span class="px-2 py-0.5 rounded-lg text-[10px] font-bold bg-sky-950/90 text-sky-300">🔊 Audio Preview</span>' : ''}
-                ${p.video ? '<span class="px-2 py-0.5 rounded-lg text-[10px] font-bold bg-purple-950/90 text-purple-300">🎬 Video Demo</span>' : ''}
+                ${availabilityBadge}
+                ${targetedBadge}
+                ${p.audioPreview ? '<span class="px-2 py-0.5 rounded-lg text-[10px] font-bold bg-sky-950/90 text-sky-300">🔊 Audio</span>' : ''}
+                ${p.video ? '<span class="px-2 py-0.5 rounded-lg text-[10px] font-bold bg-purple-950/90 text-purple-300">🎬 Video</span>' : ''}
               </div>
               <div class="absolute top-2.5 right-2.5 flex gap-1">
                 <button type="button" onclick="toggleFavoriteProduct('${p.id}')" class="w-8 h-8 rounded-full bg-slate-950/85 border border-slate-700 text-xs cursor-pointer">${isFav ? '❤️' : '🤍'}</button>
@@ -3131,7 +3313,9 @@
             <span class="text-lg font-extrabold gold-gradient-text">${p.price === 0 ? 'FREE' : '$' + p.price.toFixed(2)}</span>
             <div class="flex gap-1.5">
               <button type="button" onclick="openReportModal('${p.id}')" class="px-2.5 py-2 rounded-xl bg-rose-500/15 text-xs font-bold text-rose-300 cursor-pointer">🚩</button>
-              <button type="button" onclick="handleProductCardClick('${p.id}')" class="gold-btn px-3.5 py-2 rounded-xl text-xs font-extrabold cursor-pointer">${isDirect ? '📥 Preview & Buy' : 'Buy / View ↗'}</button>
+              <button type="button" onclick="handleProductCardClick('${p.id}')" class="${p.isSoldOut ? 'bg-slate-800 text-slate-500 cursor-not-allowed' : 'gold-btn'} px-3.5 py-2 rounded-xl text-xs font-extrabold cursor-pointer">
+                ${p.isSoldOut ? 'Sold Out' : (isDirect ? '📥 Preview & Buy' : 'Buy / View ↗')}
+              </button>
             </div>
           </div>
         </article>`;
@@ -3145,7 +3329,22 @@
       const priceMode = document.getElementById('price-filter')?.value || 'all';
       const infoMode = document.getElementById('info-filter')?.value || 'all';
 
-      let filtered = [...products].filter(p => !deletedProductIds.includes(p.id));
+      let filtered = [...products].filter(p => {
+        if (deletedProductIds.includes(p.id)) return false;
+
+        // TARGETED BUYER PRIVACY FILTER
+        if (p.targetedUser && p.targetedUser.trim() !== '') {
+          const target = p.targetedUser.trim().toLowerCase();
+          const viewerEmail = (currentUser?.email || '').toLowerCase();
+          const viewerName = (currentUser?.name || '').toLowerCase();
+          const isCreator = viewerEmail && viewerEmail === (p.creatorEmail || '').toLowerCase();
+          const isOwner = isOwnerLoggedIn();
+          const isTarget = (viewerEmail && viewerEmail === target) || (viewerName && viewerName === target);
+          if (!isCreator && !isOwner && !isTarget) return false;
+        }
+
+        return true;
+      });
 
       if (activeTagFilter !== 'All') filtered = filtered.filter(p => p.tags.includes(activeTagFilter) || p.type === activeTagFilter);
       if (query) filtered = filtered.filter(p => p.title.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query) || p.creator.toLowerCase().includes(query));
@@ -3211,6 +3410,29 @@
       document.getElementById('modal-info-score').textContent = `✅ ${p.infoScore}% Info Score`;
       document.getElementById('modal-prod-desc').textContent = p.desc;
 
+      const exclBadge = document.getElementById('modal-exclusive-badge');
+      if (exclBadge) {
+        exclBadge.style.display = p.targetedUser ? 'inline-block' : 'none';
+        if (p.targetedUser) exclBadge.textContent = `🎯 Exclusive to: ${p.targetedUser}`;
+      }
+
+      const stockBadge = document.getElementById('modal-stock-badge');
+      if (stockBadge) {
+        if (p.isSoldOut) {
+          stockBadge.textContent = 'Sold Out';
+          stockBadge.className = 'px-2 py-1 rounded-lg bg-rose-950 text-rose-300 font-bold border border-rose-500/50';
+        } else if (p.availabilityMode === 'one_time') {
+          stockBadge.textContent = '1/1 Single Edition';
+          stockBadge.className = 'px-2 py-1 rounded-lg bg-amber-500/20 text-amber-300 font-bold border border-amber-500/50';
+        } else if (p.availabilityMode === 'limited_qty') {
+          stockBadge.textContent = `${p.stockQty} In Stock`;
+          stockBadge.className = 'px-2 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/50';
+        } else {
+          stockBadge.textContent = 'Unlimited Stock';
+          stockBadge.className = 'px-2 py-1 rounded-lg bg-slate-900 border border-slate-700 text-slate-300';
+        }
+      }
+
       const vidWrap = document.getElementById('modal-video-wrap');
       const vidEl = document.getElementById('modal-prod-video');
       if (p.video) { vidEl.src = p.video; vidWrap.style.display = 'block'; } else { vidEl.pause(); vidWrap.style.display = 'none'; }
@@ -3224,20 +3446,32 @@
       if (p.hostingMode === 'direct_web') {
         if (directBox) directBox.style.display = 'block';
         document.getElementById('modal-seller-wallet-info').textContent = `Seller Wallet: ${p.sellerWallet || appConfig.wallets.unstoppable}`;
-        document.getElementById('modal-direct-download-btn').onclick = () => triggerDirectDigitalPurchaseAndDownload(p);
+        const dlBtn = document.getElementById('modal-direct-download-btn');
+        if (dlBtn) {
+          dlBtn.disabled = Boolean(p.isSoldOut);
+          dlBtn.textContent = p.isSoldOut ? 'Sold Out' : '⚡ Pay & Download File Now';
+          dlBtn.className = p.isSoldOut ? 'w-full py-2.5 rounded-xl bg-slate-800 text-slate-500 font-bold cursor-not-allowed' : 'w-full py-2.5 rounded-xl bg-emerald-500 text-slate-950 font-extrabold cursor-pointer';
+          dlBtn.onclick = () => triggerDirectDigitalPurchaseAndDownload(p);
+        }
         if (buyBtn) buyBtn.style.display = 'none';
       } else {
         if (directBox) directBox.style.display = 'none';
-        if (buyBtn) buyBtn.style.display = 'block';
-        buyBtn.onclick = () => {
-          if (!currentUser) {
-            closeProductModal();
-            openAuthGateModal('Please sign in or create a free account to buy this product.');
-            return;
-          }
-          incrementProductClick(p.id);
-          window.open(buildMonetizedUrl(p.url), '_blank');
-        };
+        if (buyBtn) {
+          buyBtn.style.display = 'block';
+          buyBtn.disabled = Boolean(p.isSoldOut);
+          buyBtn.textContent = p.isSoldOut ? 'Sold Out' : 'Buy / View ↗';
+          buyBtn.className = p.isSoldOut ? 'flex-1 bg-slate-800 text-slate-500 py-2.5 rounded-xl text-center font-bold cursor-not-allowed' : 'flex-1 gold-btn py-2.5 rounded-xl text-center font-extrabold cursor-pointer';
+          buyBtn.onclick = () => {
+            if (!currentUser) {
+              closeProductModal();
+              openAuthGateModal('Please sign in or create a free account to buy this product.');
+              return;
+            }
+            if (p.isSoldOut) return;
+            markProductPurchased(p);
+            window.open(buildMonetizedUrl(p.url), '_blank');
+          };
+        }
       }
 
       document.getElementById('modal-creator-name').textContent = p.creator;
@@ -3255,45 +3489,6 @@
     }
 
     function closeProductModal() { closeModal('product-detail-modal'); }
-
-    function incrementProductClick(id) {
-      const p = products.find(i => i.id === id);
-      if (p) {
-        p.clicks += 1;
-        saveAllState();
-        syncProductToCloud(p);
-      }
-    }
-
-    function deleteListing(id) {
-      const p = products.find(i => i.id === id);
-      if (!p) return;
-      if (!canUserDeleteProduct(p)) {
-        alert('⛔ Unauthorized: Only the verified creator of this product or the platform owner can delete it.');
-        return;
-      }
-
-      if (!confirm(`Are you sure you want to PERMANENTLY delete "${p.title}"?\n\nThis product will be permanently purged.`)) {
-        return;
-      }
-
-      if (!deletedProductIds.includes(id)) {
-        deletedProductIds.push(id);
-      }
-
-      products = products.filter(i => i.id !== id);
-
-      if (supabaseClient) {
-        supabaseClient.from('products').delete().eq('id', id).then(() => {});
-      }
-
-      saveAllState();
-      closeProductModal();
-      renderCreatorStudio();
-      renderMarketplaceGrid();
-      if (isOwnerLoggedIn()) loadAdminInputs();
-      alert(`🗑️ "${p.title}" was permanently deleted.`);
-    }
 
     // -------------------------------------------------------------------------
     // INBOX SYSTEM WITH READ AUTO-CLEARING
@@ -3519,7 +3714,7 @@
 
       // 4. Beginner Cohort Table
       const cohort = Object.values(usersDB).filter(u => u && (u.beginnerFlagged || u.membershipType?.startsWith('beginner'))).map(u => ({ u, calc: calculateBeginnerOwedBreakdown(u), w: getWeeklyUploadCountForUser(u.email) })).sort((a, b) => a.calc.daysLeft - b.calc.daysLeft);
-      document.getElementById('admin-beginner-cohort-table').innerHTML = cohort.length === 0 ? `<p class="text-slate-400">No active beginner cohort accounts.</p>` : cohort.map(({ u, calc, w }) => `<div class="bg-slate-950 p-3 rounded-xl border border-amber-500/40 flex justify-between items-center"><div><strong class="text-white">${sanitizeHTML(u.name)}</strong> (${sanitizeHTML(u.email)})<div class="text-[11px] text-amber-300">⏳ ${calc.daysLeft}d left • Weekly Uploads: ${w}/5 • Total: ${calc.uploadsCount} • Owed: $${calc.totalOwed}</div></div><div class="flex gap-1.5"><button type="button" onclick="openOwnerDirectMsgModal('${u.email}')" class="px-2 py-1 rounded bg-sky-500/20 text-sky-300 font-bold cursor-pointer">💬 ...</button><button type="button" onclick="adminSendWarningToUser('${u.email}')" class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 font-bold cursor-pointer">Warn (3d)</button><button type="button" onclick="adminDeleteUserAccount('${u.email}')" class="px-2.5 py-1 rounded bg-rose-600 text-white font-bold cursor-pointer">Ban</button></div></div>`).join('');
+      document.getElementById('admin-beginner-cohort-table').innerHTML = cohort.length === 0 ? `<p class="text-slate-400">No active beginner cohort accounts.</p>` : cohort.map(({ u, calc, w }) => `<div class="bg-slate-950 p-3 rounded-xl border border-amber-500/40 flex justify-between items-center"><div><strong class="text-white">${sanitizeHTML(u.name)}</strong> (${sanitizeHTML(u.email)})<div class="text-[11px] text-amber-300">⏳ ${calc.daysLeft}d left • Weekly: ${w}/5 • Owed: $${calc.totalOwed}</div></div><div class="flex gap-1.5"><button type="button" onclick="openOwnerDirectMsgModal('${u.email}')" class="px-2 py-1 rounded bg-sky-500/20 text-sky-300 font-bold cursor-pointer">💬 ...</button><button type="button" onclick="adminSendWarningToUser('${u.email}')" class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 font-bold cursor-pointer">Warn (3d)</button><button type="button" onclick="adminDeleteUserAccount('${u.email}')" class="px-2.5 py-1 rounded bg-rose-600 text-white font-bold cursor-pointer">Ban</button></div></div>`).join('');
 
       // 5. Overdue Ban Queue
       const overdue = Object.values(usersDB).filter(u => u && u.membershipType === 'beginner_expired_unpaid');
@@ -3656,7 +3851,7 @@
       document.getElementById('stat-my-views').textContent = myProds.reduce((s, p) => s + p.views, 0);
       document.getElementById('stat-my-clicks').textContent = myProds.reduce((s, p) => s + p.clicks, 0);
       document.getElementById('stat-my-followers').textContent = currentUser.followersCount || 0;
-      document.getElementById('seller-products-table').innerHTML = myProds.map(p => `<div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between items-center text-xs"><span><strong>${sanitizeHTML(p.title)}</strong> ($${p.price.toFixed(2)})</span><button type="button" onclick="deleteListing('${p.id}')" class="px-3 py-1 rounded bg-rose-500/20 text-rose-300 font-bold cursor-pointer">🗑️ Delete</button></div>`).join('');
+      document.getElementById('seller-products-table').innerHTML = myProds.map(p => `<div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between items-center text-xs"><span><strong>${sanitizeHTML(p.title)}</strong> ($${p.price.toFixed(2)}) ${p.isSoldOut ? '<span class="text-rose-400 font-bold ml-1">[Sold Out]</span>' : ''}</span><button type="button" onclick="deleteListing('${p.id}')" class="px-3 py-1 rounded bg-rose-500/20 text-rose-300 font-bold cursor-pointer">🗑️ Delete</button></div>`).join('');
     }
 
     function saveUserProfileSettings() {
@@ -3702,6 +3897,9 @@
       document.getElementById('pub-prof-followers').textContent = targetUser.followersCount || 0;
       document.getElementById('pub-prof-count').textContent = creatorProducts.length;
       
+      const vBadge = document.getElementById('pub-prof-verified-badge');
+      if (vBadge) vBadge.style.display = targetUser.isVerifiedCreator ? 'inline-block' : 'none';
+
       const showFlag = targetUser.beginnerFlagged && (isOwnerLoggedIn() || (currentUser && currentUser.email.toLowerCase() === currentViewedProfileEmail) || targetUser.beginnerFlagVisibility === 'public');
       const pubFlag = document.getElementById('pub-prof-beginner-flag');
       if (pubFlag) pubFlag.style.display = showFlag ? 'inline-block' : 'none';
@@ -3743,7 +3941,7 @@
 
     function attemptOpenUploadTab() {
       if (!currentUser) {
-        openAuthGateModal('Sign in or create an account first—then unlock a Seller Membership or the 3-Month Beginner Bundle to upload files.', 'upload_or_membership');
+        openAuthGateModal('Sign in or create an account first—then unlock Seller Membership to upload files.', 'upload_or_membership');
         return;
       }
       enforceUploadGateUI();
@@ -3812,6 +4010,69 @@
       }
     }
 
+    function updateGuestVsAuthHeaderUI() {
+      const signedIn = Boolean(currentUser && currentUser.email);
+      const setDisplay = (id, displayStyle) => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = displayStyle;
+      };
+
+      setDisplay('nav-studio', signedIn ? 'block' : 'none');
+      setDisplay('mob-nav-studio', signedIn ? 'block' : 'none');
+      setDisplay('header-inbox-btn', signedIn ? 'flex' : 'none');
+      setDisplay('header-fav-btn', signedIn ? 'flex' : 'none');
+      setDisplay('header-cart-btn', signedIn ? 'flex' : 'none');
+      setDisplay('header-profile-btn', signedIn ? 'flex' : 'none');
+      setDisplay('header-logout-btn', signedIn ? 'block' : 'none');
+      setDisplay('header-guest-signin-btn', signedIn ? 'none' : 'block');
+
+      const lbl = document.getElementById('auth-header-label');
+      if (lbl && currentUser?.name) lbl.textContent = currentUser.name.split(' ')[0];
+      
+      updateSavedAndCartBadges();
+      updateTreasuryNotificationBadges();
+    }
+
+    function updateTreasuryNotificationBadges() {
+      const pendingUsers = Object.values(usersDB).filter(u => u && (u.beginnerSettlementStatus === 'pending_review' || u.membershipSettlementStatus === 'pending_review'));
+      const badge = document.getElementById('admin-pending-count-badge');
+      if (badge) {
+        if (pendingUsers.length > 0 && isOwnerLoggedIn()) {
+          badge.style.display = 'inline-block';
+          badge.textContent = `🚨 ${pendingUsers.length}`;
+        } else {
+          badge.style.display = 'none';
+        }
+      }
+      const qCount = document.getElementById('treasury-queue-count');
+      if (qCount) qCount.textContent = pendingUsers.length;
+    }
+
+    function completeAuthentication(showWelcome = false) {
+      closeModal('mandatory-auth-gate');
+      runBeginnerCohortAudit();
+      updateGuestVsAuthHeaderUI();
+      enforceAdminVisibility();
+      enforceUploadGateUI();
+      updateSavedAndCartBadges();
+      syncDynamicPricingLabels();
+      renderSocialLinksEverywhere();
+      renderTagFilterStrip();
+      renderMarketplaceGrid();
+
+      if (pendingPostAuthAction === 'upload_or_membership') {
+        pendingPostAuthAction = null;
+        if (!hasActiveSellerMembership(currentUser)) openNativeCheckoutModal();
+        else { switchMainTab('studio'); switchStudioSubTab('upload'); }
+        return;
+      }
+
+      if (showWelcome && currentUser) {
+        document.getElementById('welcome-body').innerHTML = `Assalamu Alaikum & Welcome, <strong>${sanitizeHTML(currentUser.name)}</strong>! Reach us anytime at <strong class="text-amber-300">altujarvaults@gmail.com</strong>.`;
+        openModal('welcome-modal');
+      }
+    }
+
     function openSavedVaultModal(mode = 'favs') {
       if (!currentUser) { openAuthGateModal('Please sign in first.'); return; }
       const idList = mode === 'favs' ? (currentUser.favorites || []) : (currentUser.cart || []);
@@ -3874,4 +4135,4 @@
   </script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
-  </html>
+</html>
