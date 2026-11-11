@@ -136,11 +136,12 @@
       </div>
 
       <div class="text-center space-y-1.5 pt-1">
-        <div class="w-14 h-14 rounded-full bg-[#FAF6EE] p-1 mx-auto shadow-lg border-2 border-[#D4AF37] flex items-center justify-center">
-          <svg viewBox="0 0 120 120" class="w-full h-full">
-            <circle cx="60" cy="60" r="56" fill="#FAF6EE" stroke="#B3831E" stroke-width="4"/>
-            <path fill="#B3831E" d="M 22 44 C 20 42, 21 38, 25 37 C 29 36, 33 34, 37 34 C 39 31, 42 31, 43 34 C 44 36, 42 40, 43 45 C 44 51, 48 55, 53 51 C 58 45, 63 35, 71 35 C 79 35, 85 46, 94 53 C 99 56, 105 56, 108 53 C 104 59, 97 61, 90 59 C 97 63, 103 63, 107 61 C 102 67, 94 68, 86 65 C 93 70, 100 71, 105 69 C 98 75, 87 75, 77 69 C 71 65, 67 73, 69 84 C 62 79, 57 69, 54 63 C 45 63, 38 59, 35 49 C 33 44, 30 45, 25 46 Z"/>
-          </svg>
+        <div class="w-14 h-14 rounded-full bg-[#FAF6EE] p-1 mx-auto shadow-lg border-2 border-[#D4AF37] flex items-center justify-center overflow-hidden">
+        <img id="gate-brand-logo-img" src="favicon.svg" alt="AL-TUJAR VAULTS" class="w-full h-full object-cover rounded-full hidden" onerror="this.classList.add('hidden'); document.getElementById('gate-brand-logo-svg').classList.remove('hidden');" />
+        <svg id="gate-brand-logo-svg" viewBox="0 0 120 120" class="w-full h-full">
+          <circle cx="60" cy="60" r="56" fill="#FAF6EE" stroke="#B3831E" stroke-width="4"/>
+          <path fill="#B3831E" d="M 22 44 C 20 42, 21 38, 25 37 C 29 36, 33 34, 37 34 C 39 31, 42 31, 43 34 C 44 36, 42 40, 43 45 C 44 51, 48 55, 53 51 C 58 45, 63 35, 71 35 C 79 35, 85 46, 94 53 C 99 56, 105 56, 108 53 C 104 59, 97 61, 90 59 C 97 63, 103 63, 107 61 C 102 67, 94 68, 86 65 C 93 70, 100 71, 105 69 C 98 75, 87 75, 77 69 C 71 65, 67 73, 69 84 C 62 79, 57 69, 54 63 C 45 63, 38 59, 35 49 C 33 44, 30 45, 25 46 Z"/>
+        </svg>
         </div>
         <h2 class="brand-gold-3d text-2xl sm:text-3xl notranslate">AL-TUJAR VAULTS</h2>
         <p id="auth-gate-prompt-msg" class="text-xs text-amber-300 font-semibold">Sign in or create a free account to continue.</p>
@@ -294,8 +295,9 @@
   <header class="sticky top-0 z-40 backdrop-blur-xl bg-obsidian/90 border-b border-amber-500/20">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 py-3 flex items-center justify-between gap-2">
       <div onclick="switchMainTab('shop')" class="flex items-center gap-2.5 cursor-pointer group shrink-0">
-        <div class="w-11 h-11 rounded-full bg-[#FAF6EE] p-0.5 shadow-lg border-2 border-[#D4AF37] flex items-center justify-center">
-          <svg viewBox="0 0 120 120" class="w-full h-full"><circle cx="60" cy="60" r="56" fill="#FAF6EE" stroke="#B3831E" stroke-width="3"/><path fill="#B3831E" d="M 22 44 C 20 42, 21 38, 25 37 C 29 36, 33 34, 37 34 C 39 31, 42 31, 43 34 C 44 36, 42 40, 43 45 C 44 51, 48 55, 53 51 C 58 45, 63 35, 71 35 C 79 35, 85 46, 94 53 C 99 56, 105 56, 108 53 C 104 59, 97 61, 90 59 C 97 63, 103 63, 107 61 C 102 67, 94 68, 86 65 C 93 70, 100 71, 105 69 C 98 75, 87 75, 77 69 C 71 65, 67 73, 69 84 C 62 79, 57 69, 54 63 C 45 63, 38 59, 35 49 C 33 44, 30 45, 25 46 Z"/></svg>
+        <div class="w-11 h-11 rounded-full bg-[#FAF6EE] p-0.5 shadow-lg border-2 border-[#D4AF37] flex items-center justify-center overflow-hidden">
+        <img id="nav-brand-logo-img" src="favicon.svg" alt="AL-TUJAR VAULTS" class="w-full h-full object-cover rounded-full hidden" onerror="this.classList.add('hidden'); document.getElementById('nav-brand-logo-svg').classList.remove('hidden');" />
+        <svg id="nav-brand-logo-svg" viewBox="0 0 120 120" class="w-full h-full"><circle cx="60" cy="60" r="56" fill="#FAF6EE" stroke="#B3831E" stroke-width="3"/><path fill="#B3831E" d="M 22 44 C 20 42, 21 38, 25 37 C 29 36, 33 34, 37 34 C 39 31, 42 31, 43 34 C 44 36, 42 40, 43 45 C 44 51, 48 55, 53 51 C 58 45, 63 35, 71 35 C 79 35, 85 46, 94 53 C 99 56, 105 56, 108 53 C 104 59, 97 61, 90 59 C 97 63, 103 63, 107 61 C 102 67, 94 68, 86 65 C 93 70, 100 71, 105 69 C 98 75, 87 75, 77 69 C 71 65, 67 73, 69 84 C 62 79, 57 69, 54 63 C 45 63, 38 59, 35 49 C 33 44, 30 45, 25 46 Z"/></svg>
         </div>
         <div>
           <span class="brand-gold-3d text-sm sm:text-xl block leading-none notranslate">AL-TUJAR VAULTS</span>
@@ -866,23 +868,51 @@
           <button type="button" onclick="adminAddSolanaWallet()" class="gold-btn py-2 px-4 rounded-xl font-bold text-xs cursor-pointer">+ Add Solana Wallet</button>
         </div>
       </div>
-
-      <!-- ADDITIONAL PAYMENT METHODS (TELEBIRR, CBE, PAYPAL) -->
-      <div class="bg-obsidianCard border border-amber-500/40 rounded-2xl p-5 space-y-3">
-        <div class="flex justify-between items-center border-b border-slate-800 pb-2">
-          <div class="flex items-center gap-2">
-            <span class="text-lg">💳</span>
-            <h3 class="font-bold text-amber-300 text-sm">Additional Payment Methods & Banking (Syncs to User Upload Modal)</h3>
-          </div>
-          <span class="text-[10px] text-slate-400">Telebirr, CBE Bank, PayPal, Wise, etc.</span>
+<!-- ADDITIONAL PAYMENT METHODS (GLOBAL SETTLEMENT & CUSTOM RAILS) -->
+    <div class="bg-obsidianCard border border-amber-500/40 rounded-2xl p-5 space-y-3">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+        <div class="flex items-center gap-2">
+          <span class="text-lg">💳</span>
+          <h3 class="font-bold text-amber-300 text-sm">Additional Payment Methods & Banking (Syncs to User Upload Modal)</h3>
         </div>
-        <div id="admin-custom-payments-list" class="space-y-2"></div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
-          <input type="text" id="new-pay-method-name" placeholder="Method Name (e.g. Telebirr, CBE Bank, PayPal)" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white text-xs outline-none focus:border-amber-400">
-          <input type="text" id="new-pay-method-details" placeholder="Account No / Phone / Instructions" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white text-xs outline-none focus:border-amber-400">
-          <button type="button" onclick="adminAddCustomPaymentMethod()" class="gold-btn py-2 px-4 rounded-xl font-bold text-xs cursor-pointer">+ Add Payment Method</button>
+        <span class="text-[10px] text-slate-400">Wise, PayPal, Bank Wire, Custom Settlement</span>
+      </div>
+      <div id="admin-custom-payments-list" class="space-y-2"></div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
+        <input type="text" id="new-pay-method-name" placeholder="Method Name (e.g. PayPal, Wise, Bank Wire)" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white text-xs outline-none focus:border-amber-400">
         </div>
       </div>
+      <!-- WEBSITE BRAND LOGO & PROFILE MANAGER -->
+    <div class="bg-obsidianCard border border-amber-500/40 rounded-2xl p-5 space-y-3">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+        <div class="flex items-center gap-2">
+          <span class="text-lg">🖼️</span>
+          <h3 class="font-bold text-amber-300 text-sm">Website Brand Profile Logo (Header & Modals)</h3>
+        </div>
+        <span class="text-[10px] text-slate-400">Instant Live Preview & Switch</span>
+      </div>
+      <p class="text-[11px] text-slate-400">
+        Set the official brand logo across the marketplace header and sign-in modals. Paste an image URL (such as from your Supabase <code>Ads</code> bucket) or upload a photo directly from your device.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 items-center bg-slate-950 p-3.5 rounded-xl border border-slate-800">
+        <div class="w-14 h-14 rounded-full bg-[#FAF6EE] p-0.5 shadow-lg border-2 border-[#D4AF37] flex items-center justify-center overflow-hidden shrink-0">
+          <img id="admin-logo-preview-img" src="favicon.svg" alt="Brand Logo Preview" class="w-full h-full object-cover rounded-full" onerror="this.src='favicon.svg'" />
+        </div>
+        <div class="flex-1 w-full flex flex-col sm:flex-row gap-2">
+          <input type="text" id="adm-brand-logo-input" placeholder="Paste Logo URL (https://... or choose image)" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white text-xs outline-none focus:border-amber-400">
+          <label class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-300 font-bold text-xs cursor-pointer shrink-0 text-center">
+            📁 Choose File
+            <input type="file" accept="image/*" class="hidden" onchange="handleBrandLogoFileUpload(event)">
+          </label>
+          <button type="button" onclick="saveBrandLogoSettings()" class="gold-btn py-2 px-5 rounded-xl font-bold text-xs cursor-pointer shrink-0">
+            💾 Save Brand Logo
+          </button>
+          <button type="button" onclick="resetBrandLogoToDefault()" class="px-3 py-2 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 hover:text-white font-bold text-xs cursor-pointer shrink-0" title="Reset to original camel icon">
+            ↺ Reset
+          </button>
+        </div>
+      </div>
+    </div>
 
       <!-- SPONSORED ADS CAMPAIGN MANAGER -->
       <div class="bg-obsidianCard border border-amber-500/40 rounded-2xl p-5 space-y-3">
@@ -1274,9 +1304,11 @@
         reddit: 'https://www.reddit.com/r/Al_tujar_vaults/s/qbc7Daeypg'
       },
       amazonTag: 'altujarvaults-20',
+      brandLogo: '',
       customPayments: [
-        { id: 1, name: 'Telebirr / Local Banking', details: 'Phone/Account: +251 9XX XXX XXX (Send confirmation screenshot to altujarvaults@gmail.com)' }
+        { id: 1, name: 'Bybit Direct Settlement / Wire', details: 'Bybit UID: 587086948 or custom bank wire upon request (altujarvaults@gmail.com)' }
       ],
+      sponsoredAd: {
       sponsoredAd: {
         active: false,
         type: 'image',
@@ -1422,7 +1454,8 @@
         beginnerBasePrice: Number(savedCfg.beginnerBasePrice || 23),
         beginnerSalePct: Number(savedCfg.beginnerSalePct || 23),
         restartPenaltyPct: Number(savedCfg.restartPenaltyPct || 15),
-        socials: { ...DEFAULT_CONFIG.socials, ...(savedCfg.socials || {}) },
+      brandLogo: savedCfg.brandLogo || DEFAULT_CONFIG.brandLogo || '',
+      socials: { ...DEFAULT_CONFIG.socials, ...(savedCfg.socials || {}) },
         solanaWallets: Array.isArray(savedCfg.solanaWallets) && savedCfg.solanaWallets.length > 0 ? savedCfg.solanaWallets : DEFAULT_CONFIG.solanaWallets,
         customPayments: Array.isArray(savedCfg.customPayments) ? savedCfg.customPayments : DEFAULT_CONFIG.customPayments,
         sponsoredAd: { ...DEFAULT_CONFIG.sponsoredAd, ...(savedCfg.sponsoredAd || {}) }
@@ -2228,7 +2261,71 @@
       loadAdminInputs();
       alert(`✉️ Official message dispatched to ${u.email}'s inbox!`);
     }
+      
+// -------------------------------------------------------------------------
+  // DYNAMIC BRAND LOGO & PROFILE IDENTITY ENGINE
+  // -------------------------------------------------------------------------
+  function applyStoreLogo(logoUrl) {
+    const url = (logoUrl !== undefined ? logoUrl : (appConfig.brandLogo || localStorage.getItem('altujar_brand_logo') || '')) || '';
+    const navImg = document.getElementById('nav-brand-logo-img');
+    const navSvg = document.getElementById('nav-brand-logo-svg');
+    const gateImg = document.getElementById('gate-brand-logo-img');
+    const gateSvg = document.getElementById('gate-brand-logo-svg');
+    const adminPreview = document.getElementById('admin-logo-preview-img');
+    const adminInput = document.getElementById('adm-brand-logo-input');
 
+    if (adminInput && url && !adminInput.value) adminInput.value = url;
+    if (adminPreview && url) adminPreview.src = url;
+
+    if (url && url.trim()) {
+      if (navImg) { navImg.src = url; navImg.classList.remove('hidden'); }
+      if (navSvg) navSvg.classList.add('hidden');
+      if (gateImg) { gateImg.src = url; gateImg.classList.remove('hidden'); }
+      if (gateSvg) gateSvg.classList.add('hidden');
+    } else {
+      if (navImg) navImg.classList.add('hidden');
+      if (navSvg) navSvg.classList.remove('hidden');
+      if (gateImg) gateImg.classList.add('hidden');
+      if (gateSvg) gateSvg.classList.remove('hidden');
+    }
+  }
+
+  function handleBrandLogoFileUpload(event) {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const dataUrl = e.target.result;
+      const inp = document.getElementById('adm-brand-logo-input');
+      const prev = document.getElementById('admin-logo-preview-img');
+      if (inp) inp.value = dataUrl;
+      if (prev) prev.src = dataUrl;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function saveBrandLogoSettings() {
+    if (!isOwnerLoggedIn()) return;
+    const logoUrl = (document.getElementById('adm-brand-logo-input')?.value || '').trim();
+    appConfig.brandLogo = logoUrl;
+    localStorage.setItem('altujar_brand_logo', logoUrl);
+    saveAllState();
+    applyStoreLogo(logoUrl);
+    alert('✅ Website brand logo updated successfully!');
+  }
+
+  function resetBrandLogoToDefault() {
+    if (!isOwnerLoggedIn()) return;
+    appConfig.brandLogo = '';
+    localStorage.removeItem('altujar_brand_logo');
+    const inp = document.getElementById('adm-brand-logo-input');
+    const prev = document.getElementById('admin-logo-preview-img');
+    if (inp) inp.value = '';
+    if (prev) prev.src = 'favicon.svg';
+    saveAllState();
+    applyStoreLogo('');
+    alert('↺ Reset brand logo to default icon.');
+  }
     // -------------------------------------------------------------------------
     // SPONSORED ADS POPUP ENGINE (VIDEO & IMAGE)
     // -------------------------------------------------------------------------
@@ -3600,7 +3697,13 @@
       syncDynamicPricingLabels();
       renderAdminSolanaWallets();
       renderAdminCustomPaymentMethods();
-      loadSponsoredAdSettings();
+    loadSponsoredAdSettings();
+    if (document.getElementById('adm-brand-logo-input')) {
+      document.getElementById('adm-brand-logo-input').value = appConfig.brandLogo || '';
+    }
+    if (document.getElementById('admin-logo-preview-img')) {
+      document.getElementById('admin-logo-preview-img').src = appConfig.brandLogo || 'favicon.svg';
+      }
 
       // 1. Pending Queue
       const pendingUsers = Object.values(usersDB).filter(u => u && (u.beginnerSettlementStatus === 'pending_review' || u.membershipSettlementStatus === 'pending_review'));
@@ -4050,7 +4153,8 @@
 
     function completeAuthentication(showWelcome = false) {
       closeModal('mandatory-auth-gate');
-      runBeginnerCohortAudit();
+    applyStoreLogo();
+    runBeginnerCohortAudit();
       updateGuestVsAuthHeaderUI();
       enforceAdminVisibility();
       enforceUploadGateUI();
@@ -4106,7 +4210,8 @@
     }
 
     window.addEventListener('DOMContentLoaded', () => {
-      syncDynamicPricingLabels();
+    applyStoreLogo();
+    syncDynamicPricingLabels();
       renderSocialLinksEverywhere();
       renderTagFilterStrip();
       renderMarketplaceGrid();
